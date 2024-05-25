@@ -16,23 +16,23 @@ struct InfoPanelView: View {
     
     var body: some View {
         VStack {
-            HStack {
-                CameraStatusLabel(enabled: model.isCameraAvailable,
-                                  qualityMode: model.isHighQualityMode)
-                    .alignmentGuide(.leading, computeValue: { dimension in
-                        dimension.width
-                    })
-                Spacer()
-                GravityStatusLabel(enabled: model.isMotionDataEnabled)
-                    .alignmentGuide(HorizontalAlignment.center,
-                                    computeValue: { dimension in dimension.width })
-                Spacer()
-                DepthStatusLabel(enabled: model.isDepthDataEnabled)
-                    .alignmentGuide(.trailing, computeValue: { dimension in
-                        dimension.width
-                    })
-            }
-            Spacer(minLength: 18)
+//            HStack {
+//                CameraStatusLabel(enabled: model.isCameraAvailable,
+//                                  qualityMode: model.isHighQualityMode)
+//                    .alignmentGuide(.leading, computeValue: { dimension in
+//                        dimension.width
+//                    })
+//                Spacer()
+//                GravityStatusLabel(enabled: model.isMotionDataEnabled)
+//                    .alignmentGuide(HorizontalAlignment.center,
+//                                    computeValue: { dimension in dimension.width })
+//                Spacer()
+//                DepthStatusLabel(enabled: model.isDepthDataEnabled)
+//                    .alignmentGuide(.trailing, computeValue: { dimension in
+//                        dimension.width
+//                    })
+//            }
+          //  Spacer(minLength: 18)
             HStack {
                 Text("Captures: \(model.captureFolderState!.captures.count)")
                     .foregroundColor(.secondary)

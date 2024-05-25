@@ -6,6 +6,7 @@
  */
 import Foundation
 import SwiftUI
+import CoreMotion
 
 /// This is the app's primary view. It contains a preview area, a capture button, and a thumbnail view
 /// showing the most recenty captured image.
@@ -20,6 +21,15 @@ struct CameraView: View {
     
     let aspectRatio: CGFloat = 4.0 / 3.0
     let previewCornerRadius: CGFloat = 15.0
+    
+    let motionManager = CMMotionManager()
+    @State private var showingAlert = false
+    @State private var alertMoveSlow = ""
+    @State private var isTooFast = false
+    @State private var timer: Timer?
+    let accelerationThreshold = 1.08 // Set your threshold value here
+    
+    @State private var showModelView = false  // State variable to control the new view presentation
     
     var body: some View {
         NavigationView {
@@ -50,27 +60,103 @@ struct CameraView: View {
                     
                     VStack {
                         // The app shows this view when showInfo is true.
-                      //  ScanToolbarView(model: model, showInfo: $showInfo).padding(.horizontal)
-//                        if showInfo {
-//                            InfoPanelView(model: model)
-//                                .padding(.horizontal).padding(.top)
-//                        }
+                        ScanToolbarView(model: model, showInfo: $showInfo).padding(.horizontal)
+                        // if showInfo {
+                        InfoPanelView(model: model)
+                            .padding(.horizontal).padding(.top)
+                        //  }
                         Spacer()
                         CaptureButtonPanelView(model: model, width: geometryReader.size.width)
                     }
+                    // Show Alert for Fast movement
+                    if !alertMoveSlow.isEmpty {
+                        Text(alertMoveSlow)
+                            .foregroundColor(.white)
+                            .padding()
+                    }
                 }
             }
-           // .navigationTitle(Text("Scan"))
-           // .navigationBarTitle("Scan")
+            // .navigationTitle(Text("Scan"))
+            // .navigationBarTitle("Scan")
             .navigationBarHidden(false)
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(leading: Button(action: {
                 presentationMode.wrappedValue.dismiss()
             }) {
+                Text("Cancel")
+                    .foregroundColor(.white)
+            })
+            .navigationBarItems(trailing: Button(action: {
+                if model.captureFolderState!.captures.count < 20 {
+                    self.showingAlert = true
+                } else {
+                    CustomLocationManager.shared.startUpdatingLocation(for: .endingPoint) // Ending Point
+                    showModelView = true  // Toggle the presentation of the model view
+                }
+            }) {
                 Text("Done")
                     .foregroundColor(.white)
             })
+            .onAppear {
+                 startMonitoringAcceleration()
+            }
+            .alert(isPresented: $showingAlert) {
+                Alert(title: Text("Low Capture Count"), message: Text("Please Capture More for the Best Result"), dismissButton: .default(Text("OK") ))
+            }
+            .sheet(isPresented: $showModelView) {  // Present the new view as a sheet
+                USDZView(captureURL: model.captureDir)
+            }
         }
+    }
+    
+    
+    func startMonitoringAcceleration() {
+        // Check if accelerometer is available
+        guard motionManager.isAccelerometerAvailable else {
+            print("Accelerometer is not available on this device.")
+            return
+        }
+        
+        // Set the update interval
+        motionManager.accelerometerUpdateInterval = 0.05 // 10 updates per second
+        
+        // Start receiving accelerometer updates
+        motionManager.startAccelerometerUpdates(to: OperationQueue.main) { data, error in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+                return
+            }
+            
+            if let acceleration = data?.acceleration {
+                processAcceleration(acceleration)
+            }
+        }
+    }
+    
+    func processAcceleration(_ acceleration: CMAcceleration) {
+        // Calculate the magnitude of the acceleration vector
+        let magnitude = sqrt(acceleration.x * acceleration.x +
+                             acceleration.y * acceleration.y +
+                             acceleration.z * acceleration.z)
+        
+        // Check if the magnitude exceeds the threshold and if the flag is not set
+        if magnitude > accelerationThreshold && !isTooFast {
+            isTooFast = true
+            alertMoveSlow = "Move slower"
+            print("Movement is too fast! Magnitude: \(magnitude)")
+            
+            // Start a timer to reset the flag and message after a few seconds
+            timer?.invalidate()
+            timer = Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false) { _ in
+                resetMovementWarning()
+            }
+        }
+    }
+    
+    func resetMovementWarning() {
+        isTooFast = false
+        alertMoveSlow = ""
+        print("Movement warning reset.")
     }
 }
 
@@ -84,24 +170,24 @@ struct CaptureButtonPanelView: View {
     var body: some View {
         // Add the bottom panel, which contains the thumbnail and capture button.
         ZStack(alignment: .center) {
-//            HStack {
-//                ThumbnailView(model: model)
-//                    .frame(width: width / 3)
-//                    .padding(.horizontal)
-//                Spacer()
-//            }
+            //            HStack {
+            //                ThumbnailView(model: model)
+            //                    .frame(width: width / 3)
+            //                    .padding(.horizontal)
+            //                Spacer()
+            //            }
             HStack {
                 Spacer()
                 CaptureButton(model: model)
                 Spacer()
             }
-//            HStack {
-//                Spacer()
-//                CaptureModeButton(model: model,
-//                                  frameWidth: width / 3)
-//                FilesButton(model: model)
-//                .padding(.horizontal)
-//            }
+            //            HStack {
+            //                Spacer()
+            //                CaptureModeButton(model: model,
+            //                                  frameWidth: width / 3)
+            //                FilesButton(model: model)
+            //                .padding(.horizontal)
+            //            }
         }
     }
 }
@@ -116,15 +202,15 @@ struct ScanToolbarView: View {
     var body: some View {
         ZStack {
             HStack {
-                SystemStatusIcon(model: model)
-                Button(action: {
-                    print("Pressed Info!")
-                    withAnimation {
-                        showInfo.toggle()
-                    }
-                }, label: {
-                    Image(systemName: "info.circle").foregroundColor(Color.blue)
-                })
+                //                SystemStatusIcon(model: model)
+                //                Button(action: {
+                //                    print("Pressed Info!")
+                //                    withAnimation {
+                //                        showInfo.toggle()
+                //                    }
+                //                }, label: {
+                //                    Image(systemName: "info.circle").foregroundColor(Color.blue)
+                //                })
                 Spacer()
                 NavigationLink(destination: HelpPageView()) {
                     Image(systemName: "questionmark.circle")
@@ -132,16 +218,16 @@ struct ScanToolbarView: View {
                 }
             }
             
-            if showInfo {
-                Text("Current Capture Info")
-                    .font(.caption)
-                    .onTapGesture {
-                        print("showInfo toggle!")
-                        withAnimation {
-                            showInfo.toggle()
-                        }
-                    }
-            }
+            //            if showInfo {
+            //                Text("Current Capture Info")
+            //                    .font(.caption)
+            //                    .onTapGesture {
+            //                        print("showInfo toggle!")
+            //                        withAnimation {
+            //                            showInfo.toggle()
+            //                        }
+            //                    }
+            //            }
         }
     }
 }
@@ -159,7 +245,6 @@ struct CaptureButton: View {
     CaptureButton.innerPadding
     
     @ObservedObject var model: CameraViewModel
-    @State private var locationCaptured: Bool = false
     
     init(model: CameraViewModel) {
         self.model = model
@@ -167,14 +252,7 @@ struct CaptureButton: View {
     
     var body: some View {
         Button(action: {
-            self.model.advanceToNextCaptureMode()
             model.captureButtonPressed()
-            
-            // Capture the Starting Point
-//            if !locationCaptured  {
-//                CustomLocationManager.shared.startUpdatingLocation(for: .startingPoint)
-//                locationCaptured = true
-//            }
         }, label: {
             if model.isAutoCaptureActive {
                 AutoCaptureButtonView(model: model)
@@ -379,7 +457,7 @@ struct ThumbnailImageView: View {
             .cornerRadius(thumbnailFrameCornerRadius)
             .clipped()
             .overlay(RoundedRectangle(cornerRadius: thumbnailFrameCornerRadius)
-                        .stroke(Color.primary, lineWidth: thumbnailStrokeWidth))
+                .stroke(Color.primary, lineWidth: thumbnailStrokeWidth))
             .shadow(radius: 10)
     }
 }
