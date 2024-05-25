@@ -34,19 +34,21 @@ struct TutorialPageView: View {
     var body: some View {
         GeometryReader { geomReader in
             VStack {
-                Image(imageName)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 0.9 * geomReader.size.width)
+//                Image(imageName)
+//                    .resizable()
+//                    .aspectRatio(contentMode: .fit)
+//                    .frame(width: 0.9 * geomReader.size.width)
                 
-                Text(imageCaption)
-                    .foregroundColor(.secondary)
-                    .padding(.bottom)
-                    // Pad the view a total of 25% (12.5% on each side).
-                    .padding(.horizontal, geomReader.size.width / 12.5)
-                    .multilineTextAlignment(.center)
+                Spacer()
                 
-                Divider()
+//                Text(imageCaption)
+//                    .foregroundColor(.secondary)
+//                    .padding(.bottom)
+//                    // Pad the view a total of 25% (12.5% on each side).
+//                    .padding(.horizontal, geomReader.size.width / 12.5)
+//                    .multilineTextAlignment(.center)
+//                
+//                Divider()
                 
                 ProConListView(pros: pros, cons: cons)
                     .padding()
@@ -61,7 +63,7 @@ struct TutorialPageView: View {
 
 struct ObjectHelpPageView: View {
     var body: some View {
-        TutorialPageView(pageName: "Object Characteristics",
+        TutorialPageView(pageName: "Scanning Characteristics",
                          imageName: "ObjectCharacteristicsTips",
                          imageCaption: "Opaque, matte objects with varied surface textures scan best."
                             + "  Capture all sides of your object in a series of orbits.\n",
@@ -81,11 +83,12 @@ struct PhotographyHelpPageView: View {
                          imageName: "PhotographyTips",
                          imageCaption: "Adjacent shots should have 70% overlap or more for alignment."
                             + "  Each object will need a different number of photos, but aim for between 20-200.",
-                         pros: ["Capture all sides of an object",
+                         pros: [
+//                            "Capture all sides of an object",
                                 "Capture between 20-200 images",
                                 "70%+ overlap between photos",
                                 "Consistent focus and image quality" ],
-                         cons: ["Parts of object out of frame",
+                         cons: ["Parts of surface out of frame",
                                 "Inconsistent camera settings"])
     }
 }
@@ -97,7 +100,7 @@ struct EnvironmentHelpPageView: View {
                          imageCaption: "Make sure you have even, good lighting and a stable environment for scanning."
                             + "  If scanning outdoors, cloudy days work best.\n",
                          pros: ["Diffuse lighting \u{2601}",
-                                "Space around intended object" ],
+                                "Space around intended wire" ],
                          cons: ["Sunny, directional lighting",
                                 "Inconsistent shadows"])
     }

@@ -105,7 +105,7 @@ public class CameraViewModel: NSObject, ObservableObject {
     }
 
     static let maxPhotosAllowed = 250
-    static let recommendedMinPhotos = 30
+    static let recommendedMinPhotos = 20
     static let recommendedMaxPhotos = 200
     public var defaultAutomaticCaptureIntervalSecs: Double = 3.0
     

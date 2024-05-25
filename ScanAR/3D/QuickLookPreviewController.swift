@@ -29,8 +29,7 @@ struct QuickLookPreviewController: UIViewControllerRepresentable {
         let closeButton = UIButton(type: .system)
         closeButton.setTitle("Close", for: .normal)
         closeButton.setTitleColor(.systemBlue, for: .normal)
-        closeButton.titleLabel?.font = UIFont.systemFont(ofSize: 18)  // Make the font larger
-        //closeButton.contentEdgeInsets = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)  // Add padding
+        closeButton.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         closeButton.addTarget(context.coordinator, action: #selector(context.coordinator.close), for: .touchUpInside)
 
         hostingController.view.addSubview(closeButton)
@@ -74,6 +73,21 @@ struct QuickLookPreviewController: UIViewControllerRepresentable {
 
         @objc func close() {
             parent.isPresented = false
+            if let hostingController = parent.topViewController() {
+                hostingController.dismiss(animated: true, completion: nil)
+            }
         }
+    }
+}
+
+extension QuickLookPreviewController {
+    func topViewController(base: UIViewController? = UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController) -> UIViewController? {
+        if let nav = base as? UINavigationController {
+            return topViewController(base: nav.visibleViewController)
+        }
+        if let presented = base?.presentedViewController {
+            return topViewController(base: presented)
+        }
+        return base
     }
 }
