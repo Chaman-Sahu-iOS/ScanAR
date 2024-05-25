@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A9C49BC0-1568-4193-83AB-F24B3A1A3076"
-            shouldBeEnabled = "No"
+            uuid = "826D9587-AA97-4F90-9CF6-171CDFEF6BE8"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ScanAR/ViewController.swift"
+            filePath = "ScanAR/3D/ModelProgressView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
-            landmarkName = "session(_:didAdd:)"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "init(model:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
