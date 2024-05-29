@@ -25,6 +25,7 @@ struct CameraView: View {
     let motionManager = CMMotionManager()
     @State private var showingAlert = false
     @State private var alertMoveSlow = ""
+    @State private var captureLabel = "consecutive captures should overlap 70%"
     @State private var isTooFast = false
     @State private var timer: Timer?
     let accelerationThreshold = 1.08 // Set your threshold value here
@@ -60,12 +61,19 @@ struct CameraView: View {
                     
                     VStack {
                         // The app shows this view when showInfo is true.
-                        ScanToolbarView(model: model, showInfo: $showInfo).padding(.horizontal)
+                       // ScanToolbarView(model: model, showInfo: $showInfo).padding(.horizontal)
                         // if showInfo {
                         InfoPanelView(model: model)
                             .padding(.horizontal).padding(.top)
                         //  }
                         Spacer()
+                        Text(captureLabel)
+                            .foregroundColor(Color.white.opacity(0.7))
+                            .padding(.horizontal, 16)  // Adjust horizontal padding
+                            .padding(.vertical, 8)     // Adjust vertical padding to be minimal
+                            .padding(.bottom, 10)
+                            .background(Color.black.opacity(0.4))  // Transparent background
+                            .cornerRadius(8)
                         CaptureButtonPanelView(model: model, width: geometryReader.size.width)
                     }
                     // Show Alert for Fast movement
