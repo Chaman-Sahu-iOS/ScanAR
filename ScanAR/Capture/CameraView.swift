@@ -23,9 +23,9 @@ struct CameraView: View {
     let previewCornerRadius: CGFloat = 15.0
     
     let motionManager = CMMotionManager()
-    @State private var showingAlert = false
+    @State private var lowCountAlert = false
     @State private var alertMoveSlow = ""
-    @State private var captureLabel = "consecutive captures should overlap 70%"
+    @State private var captureOverlapLabel = "consecutive captures should overlap 70%"
     @State private var isTooFast = false
     @State private var timer: Timer?
     let accelerationThreshold = 1.08 // Set your threshold value here
@@ -67,7 +67,7 @@ struct CameraView: View {
                             .padding(.horizontal).padding(.top)
                         //  }
                         Spacer()
-                        Text(captureLabel)
+                        Text(captureOverlapLabel)
                             .foregroundColor(Color.white.opacity(0.7))
                             .padding(.horizontal, 16)  // Adjust horizontal padding
                             .padding(.vertical, 8)     // Adjust vertical padding to be minimal
@@ -108,7 +108,7 @@ struct CameraView: View {
             .onAppear {
                  startMonitoringAcceleration()
             }
-            .alert(isPresented: $showingAlert) {
+            .alert(isPresented: $lowCountAlert) {
                 Alert(title: Text("Low Capture Count"), message: Text("Please Capture More for the Best Result"), dismissButton: .default(Text("OK") ))
             }
             .sheet(isPresented: $showModelView) {  // Present the new view as a sheet
