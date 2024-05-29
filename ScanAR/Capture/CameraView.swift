@@ -96,7 +96,7 @@ struct CameraView: View {
             })
             .navigationBarItems(trailing: Button(action: {
                 if model.captureFolderState!.captures.count < 20 {
-                    self.showingAlert = true
+                    self.lowCountAlert = true
                 } else {
                     CustomLocationManager.shared.startUpdatingLocation(for: .endingPoint) // Ending Point
                     showModelView = true  // Toggle the presentation of the model view
