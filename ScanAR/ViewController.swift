@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // Update the time interval of Auto Capture
-        model.defaultAutomaticCaptureIntervalSecs = 1
+       // model.defaultAutomaticCaptureIntervalSecs = 1
         
         // Update Catpure Mode
         model.captureMode = .automatic(everySecs: 1)
