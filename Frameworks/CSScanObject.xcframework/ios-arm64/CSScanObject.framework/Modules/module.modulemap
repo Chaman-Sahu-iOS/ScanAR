@@ -1,0 +1,6 @@
+framework module CSScanObject {
+  umbrella header "CSScanObject.h"
+  export *
+
+  module * { export * }
+}

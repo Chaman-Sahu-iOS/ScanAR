@@ -1,0 +1,3851 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "CSScanObject",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CoreLocation",
+        "printedName": "CoreLocation",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "CSScanObject",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "os",
+        "printedName": "os",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "CSScanObject",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "CSScanObject",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "os",
+        "printedName": "os",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "CSScanObject",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CaptureView",
+        "printedName": "CaptureView",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "model",
+            "printedName": "model",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CameraViewModel",
+                "printedName": "CSScanObject.CameraViewModel",
+                "usr": "c:@M@CSScanObject@objc(cs)CameraViewModel"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12CSScanObject11CaptureViewV5modelAA06CameraD5ModelCvp",
+            "mangledName": "$s12CSScanObject11CaptureViewV5modelAA06CameraD5ModelCvp",
+            "moduleName": "CSScanObject",
+            "declAttributes": [
+              "Custom",
+              "ProjectedValueProperty",
+              "AccessControl",
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CameraViewModel",
+                    "printedName": "CSScanObject.CameraViewModel",
+                    "usr": "c:@M@CSScanObject@objc(cs)CameraViewModel"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject11CaptureViewV5modelAA06CameraD5ModelCvg",
+                "mangledName": "$s12CSScanObject11CaptureViewV5modelAA06CameraD5ModelCvg",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CameraViewModel",
+                    "printedName": "CSScanObject.CameraViewModel",
+                    "usr": "c:@M@CSScanObject@objc(cs)CameraViewModel"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject11CaptureViewV5modelAA06CameraD5ModelCvs",
+                "mangledName": "$s12CSScanObject11CaptureViewV5modelAA06CameraD5ModelCvs",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "intro_Macosx": "10.15",
+                "intro_iOS": "13.0",
+                "intro_tvOS": "13.0",
+                "intro_watchOS": "6.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject11CaptureViewV5modelAA06CameraD5ModelCvM",
+                "mangledName": "$s12CSScanObject11CaptureViewV5modelAA06CameraD5ModelCvM",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "intro_Macosx": "10.15",
+                "intro_iOS": "13.0",
+                "intro_tvOS": "13.0",
+                "intro_watchOS": "6.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "$model",
+            "printedName": "$model",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Wrapper",
+                "printedName": "SwiftUI.ObservedObject<CSScanObject.CameraViewModel>.Wrapper",
+                "usr": "s:7SwiftUI14ObservedObjectV7WrapperV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12CSScanObject11CaptureViewV6$model7SwiftUI08ObservedB0V7WrapperVyAA06CameraD5ModelC_Gvp",
+            "mangledName": "$s12CSScanObject11CaptureViewV6$model7SwiftUI08ObservedB0V7WrapperVyAA06CameraD5ModelC_Gvp",
+            "moduleName": "CSScanObject",
+            "implicit": true,
+            "declAttributes": [
+              "Custom"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Wrapper",
+                    "printedName": "SwiftUI.ObservedObject<CSScanObject.CameraViewModel>.Wrapper",
+                    "usr": "s:7SwiftUI14ObservedObjectV7WrapperV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject11CaptureViewV6$model7SwiftUI08ObservedB0V7WrapperVyAA06CameraD5ModelC_Gvg",
+                "mangledName": "$s12CSScanObject11CaptureViewV6$model7SwiftUI08ObservedB0V7WrapperVyAA06CameraD5ModelC_Gvg",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(model:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CaptureView",
+                "printedName": "CSScanObject.CaptureView",
+                "usr": "s:12CSScanObject11CaptureViewV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CameraViewModel",
+                "printedName": "CSScanObject.CameraViewModel",
+                "usr": "c:@M@CSScanObject@objc(cs)CameraViewModel"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12CSScanObject11CaptureViewV5modelAcA06CameraD5ModelC_tcfc",
+            "mangledName": "$s12CSScanObject11CaptureViewV5modelAcA06CameraD5ModelC_tcfc",
+            "moduleName": "CSScanObject",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "body",
+            "printedName": "body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12CSScanObject11CaptureViewV4bodyQrvp",
+            "mangledName": "$s12CSScanObject11CaptureViewV4bodyQrvp",
+            "moduleName": "CSScanObject",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject11CaptureViewV4bodyQrvg",
+                "mangledName": "$s12CSScanObject11CaptureViewV4bodyQrvg",
+                "moduleName": "CSScanObject",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12CSScanObject11CaptureViewV",
+        "mangledName": "$s12CSScanObject11CaptureViewV",
+        "moduleName": "CSScanObject",
+        "declAttributes": [
+          "Custom",
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "View",
+            "printedName": "View",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI4ViewP",
+            "mangledName": "$s7SwiftUI4ViewP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "CSScanObject",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CoreImage",
+        "printedName": "CoreImage",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreMotion",
+        "printedName": "CoreMotion",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "os",
+        "printedName": "os",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "CSScanObject",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CoreGraphics",
+        "printedName": "CoreGraphics",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreImage",
+        "printedName": "CoreImage",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "Dispatch",
+        "printedName": "Dispatch",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "os",
+        "printedName": "os",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "CSScanObject",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "CSScanObject",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "CSScanObject",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "ArgumentParser",
+        "printedName": "ArgumentParser",
+        "declKind": "Import",
+        "moduleName": "CSScanObject",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CSScanObject",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "os",
+        "printedName": "os",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "RealityKit",
+        "printedName": "RealityKit",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "Metal",
+        "printedName": "Metal",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "CSScanObject",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreLocation",
+        "printedName": "CoreLocation",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "GenerateModel",
+        "printedName": "GenerateModel",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "inputFolder",
+            "printedName": "inputFolder",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URL?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12CSScanObject13GenerateModelV11inputFolder10Foundation3URLVSgvp",
+            "mangledName": "$s12CSScanObject13GenerateModelV11inputFolder10Foundation3URLVSgvp",
+            "moduleName": "CSScanObject",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.URL?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "URL",
+                        "printedName": "Foundation.URL",
+                        "usr": "s:10Foundation3URLV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject13GenerateModelV11inputFolder10Foundation3URLVSgvg",
+                "mangledName": "$s12CSScanObject13GenerateModelV11inputFolder10Foundation3URLVSgvg",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.URL?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "URL",
+                        "printedName": "Foundation.URL",
+                        "usr": "s:10Foundation3URLV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject13GenerateModelV11inputFolder10Foundation3URLVSgvs",
+                "mangledName": "$s12CSScanObject13GenerateModelV11inputFolder10Foundation3URLVSgvs",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject13GenerateModelV11inputFolder10Foundation3URLVSgvM",
+                "mangledName": "$s12CSScanObject13GenerateModelV11inputFolder10Foundation3URLVSgvM",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "outputFilename",
+            "printedName": "outputFilename",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12CSScanObject13GenerateModelV14outputFilenameSSvp",
+            "mangledName": "$s12CSScanObject13GenerateModelV14outputFilenameSSvp",
+            "moduleName": "CSScanObject",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject13GenerateModelV14outputFilenameSSvg",
+                "mangledName": "$s12CSScanObject13GenerateModelV14outputFilenameSSvg",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject13GenerateModelV14outputFilenameSSvs",
+                "mangledName": "$s12CSScanObject13GenerateModelV14outputFilenameSSvs",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject13GenerateModelV14outputFilenameSSvM",
+                "mangledName": "$s12CSScanObject13GenerateModelV14outputFilenameSSvM",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "progressHandler",
+            "printedName": "progressHandler",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Double) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Double) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12CSScanObject13GenerateModelV15progressHandlerySdcSgvp",
+            "mangledName": "$s12CSScanObject13GenerateModelV15progressHandlerySdcSgvp",
+            "moduleName": "CSScanObject",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.Double) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Double) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Double",
+                            "printedName": "Swift.Double",
+                            "usr": "s:Sd"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject13GenerateModelV15progressHandlerySdcSgvg",
+                "mangledName": "$s12CSScanObject13GenerateModelV15progressHandlerySdcSgvg",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.Double) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Double) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Double",
+                            "printedName": "Swift.Double",
+                            "usr": "s:Sd"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject13GenerateModelV15progressHandlerySdcSgvs",
+                "mangledName": "$s12CSScanObject13GenerateModelV15progressHandlerySdcSgvs",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject13GenerateModelV15progressHandlerySdcSgvM",
+                "mangledName": "$s12CSScanObject13GenerateModelV15progressHandlerySdcSgvM",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "estimatedTimeHandler",
+            "printedName": "estimatedTimeHandler",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Double) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Double) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12CSScanObject13GenerateModelV20estimatedTimeHandlerySdcSgvp",
+            "mangledName": "$s12CSScanObject13GenerateModelV20estimatedTimeHandlerySdcSgvp",
+            "moduleName": "CSScanObject",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.Double) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Double) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Double",
+                            "printedName": "Swift.Double",
+                            "usr": "s:Sd"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject13GenerateModelV20estimatedTimeHandlerySdcSgvg",
+                "mangledName": "$s12CSScanObject13GenerateModelV20estimatedTimeHandlerySdcSgvg",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.Double) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Double) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Double",
+                            "printedName": "Swift.Double",
+                            "usr": "s:Sd"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject13GenerateModelV20estimatedTimeHandlerySdcSgvs",
+                "mangledName": "$s12CSScanObject13GenerateModelV20estimatedTimeHandlerySdcSgvs",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject13GenerateModelV20estimatedTimeHandlerySdcSgvM",
+                "mangledName": "$s12CSScanObject13GenerateModelV20estimatedTimeHandlerySdcSgvM",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "errorHandler",
+            "printedName": "errorHandler",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.String, Swift.Int) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String, Swift.Int) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(Swift.String, Swift.Int)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12CSScanObject13GenerateModelV12errorHandlerySS_SitcSgvp",
+            "mangledName": "$s12CSScanObject13GenerateModelV12errorHandlerySS_SitcSgvp",
+            "moduleName": "CSScanObject",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.String, Swift.Int) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.String, Swift.Int) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(Swift.String, Swift.Int)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Int",
+                                "printedName": "Swift.Int",
+                                "usr": "s:Si"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject13GenerateModelV12errorHandlerySS_SitcSgvg",
+                "mangledName": "$s12CSScanObject13GenerateModelV12errorHandlerySS_SitcSgvg",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.String, Swift.Int) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.String, Swift.Int) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(Swift.String, Swift.Int)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Int",
+                                "printedName": "Swift.Int",
+                                "usr": "s:Si"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject13GenerateModelV12errorHandlerySS_SitcSgvs",
+                "mangledName": "$s12CSScanObject13GenerateModelV12errorHandlerySS_SitcSgvs",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject13GenerateModelV12errorHandlerySS_SitcSgvM",
+                "mangledName": "$s12CSScanObject13GenerateModelV12errorHandlerySS_SitcSgvM",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "completionHandler",
+            "printedName": "completionHandler",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12CSScanObject13GenerateModelV17completionHandleryycSgvp",
+            "mangledName": "$s12CSScanObject13GenerateModelV17completionHandleryycSgvp",
+            "moduleName": "CSScanObject",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(() -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject13GenerateModelV17completionHandleryycSgvg",
+                "mangledName": "$s12CSScanObject13GenerateModelV17completionHandleryycSgvg",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(() -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject13GenerateModelV17completionHandleryycSgvs",
+                "mangledName": "$s12CSScanObject13GenerateModelV17completionHandleryycSgvs",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject13GenerateModelV17completionHandleryycSgvM",
+                "mangledName": "$s12CSScanObject13GenerateModelV17completionHandleryycSgvM",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "modelDirctoryHandler",
+            "printedName": "modelDirctoryHandler",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.String) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12CSScanObject13GenerateModelV20modelDirctoryHandlerySScSgvp",
+            "mangledName": "$s12CSScanObject13GenerateModelV20modelDirctoryHandlerySScSgvp",
+            "moduleName": "CSScanObject",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.String) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.String) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject13GenerateModelV20modelDirctoryHandlerySScSgvg",
+                "mangledName": "$s12CSScanObject13GenerateModelV20modelDirctoryHandlerySScSgvg",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.String) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.String) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject13GenerateModelV20modelDirctoryHandlerySScSgvs",
+                "mangledName": "$s12CSScanObject13GenerateModelV20modelDirctoryHandlerySScSgvs",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject13GenerateModelV20modelDirctoryHandlerySScSgvM",
+                "mangledName": "$s12CSScanObject13GenerateModelV20modelDirctoryHandlerySScSgvM",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(inputFolder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenerateModel",
+                "printedName": "CSScanObject.GenerateModel",
+                "usr": "s:12CSScanObject13GenerateModelV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URL?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12CSScanObject13GenerateModelV11inputFolderAC10Foundation3URLVSg_tcfc",
+            "mangledName": "$s12CSScanObject13GenerateModelV11inputFolderAC10Foundation3URLVSg_tcfc",
+            "moduleName": "CSScanObject",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "run",
+            "printedName": "run()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12CSScanObject13GenerateModelV3runyyF",
+            "mangledName": "$s12CSScanObject13GenerateModelV3runyyF",
+            "moduleName": "CSScanObject",
+            "declAttributes": [
+              "Mutating",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "Mutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12CSScanObject13GenerateModelV",
+        "mangledName": "$s12CSScanObject13GenerateModelV",
+        "moduleName": "CSScanObject",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CSScanObject",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreMotion",
+        "printedName": "CoreMotion",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CameraView",
+        "printedName": "CameraView",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "scanningComepletionHandler",
+            "printedName": "scanningComepletionHandler",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Bool) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Bool) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12CSScanObject10CameraViewV26scanningComepletionHandlerySbcSgvp",
+            "mangledName": "$s12CSScanObject10CameraViewV26scanningComepletionHandlerySbcSgvp",
+            "moduleName": "CSScanObject",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.Bool) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Bool) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Bool",
+                            "printedName": "Swift.Bool",
+                            "usr": "s:Sb"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject10CameraViewV26scanningComepletionHandlerySbcSgvg",
+                "mangledName": "$s12CSScanObject10CameraViewV26scanningComepletionHandlerySbcSgvg",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.Bool) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Bool) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Bool",
+                            "printedName": "Swift.Bool",
+                            "usr": "s:Sb"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject10CameraViewV26scanningComepletionHandlerySbcSgvs",
+                "mangledName": "$s12CSScanObject10CameraViewV26scanningComepletionHandlerySbcSgvs",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject10CameraViewV26scanningComepletionHandlerySbcSgvM",
+                "mangledName": "$s12CSScanObject10CameraViewV26scanningComepletionHandlerySbcSgvM",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "doneButtonView",
+            "printedName": "doneButtonView",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> SwiftUI.AnyView)?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> SwiftUI.AnyView",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyView",
+                        "printedName": "SwiftUI.AnyView",
+                        "usr": "s:7SwiftUI7AnyViewV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12CSScanObject10CameraViewV010doneButtonD07SwiftUI03AnyD0VycSgvp",
+            "mangledName": "$s12CSScanObject10CameraViewV010doneButtonD07SwiftUI03AnyD0VycSgvp",
+            "moduleName": "CSScanObject",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(() -> SwiftUI.AnyView)?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> SwiftUI.AnyView",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "AnyView",
+                            "printedName": "SwiftUI.AnyView",
+                            "usr": "s:7SwiftUI7AnyViewV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject10CameraViewV010doneButtonD07SwiftUI03AnyD0VycSgvg",
+                "mangledName": "$s12CSScanObject10CameraViewV010doneButtonD07SwiftUI03AnyD0VycSgvg",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(() -> SwiftUI.AnyView)?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> SwiftUI.AnyView",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "AnyView",
+                            "printedName": "SwiftUI.AnyView",
+                            "usr": "s:7SwiftUI7AnyViewV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject10CameraViewV010doneButtonD07SwiftUI03AnyD0VycSgvs",
+                "mangledName": "$s12CSScanObject10CameraViewV010doneButtonD07SwiftUI03AnyD0VycSgvs",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject10CameraViewV010doneButtonD07SwiftUI03AnyD0VycSgvM",
+                "mangledName": "$s12CSScanObject10CameraViewV010doneButtonD07SwiftUI03AnyD0VycSgvM",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(model:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CameraView",
+                "printedName": "CSScanObject.CameraView",
+                "usr": "s:12CSScanObject10CameraViewV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CameraViewModel",
+                "printedName": "CSScanObject.CameraViewModel",
+                "usr": "c:@M@CSScanObject@objc(cs)CameraViewModel"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12CSScanObject10CameraViewV5modelAcA0cD5ModelC_tcfc",
+            "mangledName": "$s12CSScanObject10CameraViewV5modelAcA0cD5ModelC_tcfc",
+            "moduleName": "CSScanObject",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "body",
+            "printedName": "body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpaqueTypeArchetype",
+                "printedName": "some SwiftUI.View",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "View",
+                    "printedName": "SwiftUI.View",
+                    "usr": "s:7SwiftUI4ViewP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12CSScanObject10CameraViewV4bodyQrvp",
+            "mangledName": "$s12CSScanObject10CameraViewV4bodyQrvp",
+            "moduleName": "CSScanObject",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject10CameraViewV4bodyQrvg",
+                "mangledName": "$s12CSScanObject10CameraViewV4bodyQrvg",
+                "moduleName": "CSScanObject",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12CSScanObject10CameraViewV",
+        "mangledName": "$s12CSScanObject10CameraViewV",
+        "moduleName": "CSScanObject",
+        "declAttributes": [
+          "Custom",
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "View",
+            "printedName": "View",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Body",
+                "printedName": "Body",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OpaqueTypeArchetype",
+                    "printedName": "some SwiftUI.View",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "View",
+                        "printedName": "SwiftUI.View",
+                        "usr": "s:7SwiftUI4ViewP"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7SwiftUI4ViewP",
+            "mangledName": "$s7SwiftUI4ViewP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "CSScanObject",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "CSScanObject",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "CSScanObject",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "os",
+        "printedName": "os",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "CSScanObject",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreGraphics",
+        "printedName": "CoreGraphics",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreImage",
+        "printedName": "CoreImage",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreMotion",
+        "printedName": "CoreMotion",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "os",
+        "printedName": "os",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "CSScanObject",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "os",
+        "printedName": "os",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "CSScanObject",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "CSScanObject",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreMotion",
+        "printedName": "CoreMotion",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "Import",
+        "name": "os",
+        "printedName": "os",
+        "declKind": "Import",
+        "moduleName": "CSScanObject"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CameraViewModel",
+        "printedName": "CameraViewModel",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "session",
+            "printedName": "session",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AVCaptureSession",
+                "printedName": "AVFoundation.AVCaptureSession",
+                "usr": "c:objc(cs)AVCaptureSession"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12CSScanObject15CameraViewModelC7sessionSo16AVCaptureSessionCvp",
+            "mangledName": "$s12CSScanObject15CameraViewModelC7sessionSo16AVCaptureSessionCvp",
+            "moduleName": "CSScanObject",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AVCaptureSession",
+                    "printedName": "AVFoundation.AVCaptureSession",
+                    "usr": "c:objc(cs)AVCaptureSession"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject15CameraViewModelC7sessionSo16AVCaptureSessionCvg",
+                "mangledName": "$s12CSScanObject15CameraViewModelC7sessionSo16AVCaptureSessionCvg",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AVCaptureSession",
+                    "printedName": "AVFoundation.AVCaptureSession",
+                    "usr": "c:objc(cs)AVCaptureSession"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject15CameraViewModelC7sessionSo16AVCaptureSessionCvs",
+                "mangledName": "$s12CSScanObject15CameraViewModelC7sessionSo16AVCaptureSessionCvs",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject15CameraViewModelC7sessionSo16AVCaptureSessionCvM",
+                "mangledName": "$s12CSScanObject15CameraViewModelC7sessionSo16AVCaptureSessionCvM",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "CaptureMode",
+            "printedName": "CaptureMode",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "manual",
+                "printedName": "manual",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(CSScanObject.CameraViewModel.CaptureMode.Type) -> CSScanObject.CameraViewModel.CaptureMode",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CaptureMode",
+                        "printedName": "CSScanObject.CameraViewModel.CaptureMode",
+                        "usr": "s:12CSScanObject15CameraViewModelC11CaptureModeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "CSScanObject.CameraViewModel.CaptureMode.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CaptureMode",
+                            "printedName": "CSScanObject.CameraViewModel.CaptureMode",
+                            "usr": "s:12CSScanObject15CameraViewModelC11CaptureModeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:12CSScanObject15CameraViewModelC11CaptureModeO6manualyA2EmF",
+                "mangledName": "$s12CSScanObject15CameraViewModelC11CaptureModeO6manualyA2EmF",
+                "moduleName": "CSScanObject",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "automatic",
+                "printedName": "automatic",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(CSScanObject.CameraViewModel.CaptureMode.Type) -> (Swift.Double) -> CSScanObject.CameraViewModel.CaptureMode",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Double) -> CSScanObject.CameraViewModel.CaptureMode",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CaptureMode",
+                            "printedName": "CSScanObject.CameraViewModel.CaptureMode",
+                            "usr": "s:12CSScanObject15CameraViewModelC11CaptureModeO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(everySecs: Swift.Double)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Double",
+                                "printedName": "Swift.Double",
+                                "usr": "s:Sd"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "CSScanObject.CameraViewModel.CaptureMode.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CaptureMode",
+                            "printedName": "CSScanObject.CameraViewModel.CaptureMode",
+                            "usr": "s:12CSScanObject15CameraViewModelC11CaptureModeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:12CSScanObject15CameraViewModelC11CaptureModeO9automaticyAESd_tcAEmF",
+                "mangledName": "$s12CSScanObject15CameraViewModelC11CaptureModeO9automaticyAESd_tcAEmF",
+                "moduleName": "CSScanObject",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:12CSScanObject15CameraViewModelC11CaptureModeO",
+            "mangledName": "$s12CSScanObject15CameraViewModelC11CaptureModeO",
+            "moduleName": "CSScanObject",
+            "declAttributes": [
+              "AccessControl"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "captureMode",
+            "printedName": "captureMode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CaptureMode",
+                "printedName": "CSScanObject.CameraViewModel.CaptureMode",
+                "usr": "s:12CSScanObject15CameraViewModelC11CaptureModeO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12CSScanObject15CameraViewModelC11captureModeAC07CaptureG0Ovp",
+            "mangledName": "$s12CSScanObject15CameraViewModelC11captureModeAC07CaptureG0Ovp",
+            "moduleName": "CSScanObject",
+            "declAttributes": [
+              "ProjectedValueProperty",
+              "AccessControl",
+              "Custom",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CaptureMode",
+                    "printedName": "CSScanObject.CameraViewModel.CaptureMode",
+                    "usr": "s:12CSScanObject15CameraViewModelC11CaptureModeO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject15CameraViewModelC11captureModeAC07CaptureG0Ovg",
+                "mangledName": "$s12CSScanObject15CameraViewModelC11captureModeAC07CaptureG0Ovg",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CaptureMode",
+                    "printedName": "CSScanObject.CameraViewModel.CaptureMode",
+                    "usr": "s:12CSScanObject15CameraViewModelC11CaptureModeO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject15CameraViewModelC11captureModeAC07CaptureG0Ovs",
+                "mangledName": "$s12CSScanObject15CameraViewModelC11captureModeAC07CaptureG0Ovs",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "intro_Macosx": "10.15",
+                "intro_iOS": "13.0",
+                "intro_tvOS": "13.0",
+                "intro_watchOS": "6.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject15CameraViewModelC11captureModeAC07CaptureG0OvM",
+                "mangledName": "$s12CSScanObject15CameraViewModelC11captureModeAC07CaptureG0OvM",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "intro_Macosx": "10.15",
+                "intro_iOS": "13.0",
+                "intro_tvOS": "13.0",
+                "intro_watchOS": "6.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "$captureMode",
+            "printedName": "$captureMode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Publisher",
+                "printedName": "Combine.Published<CSScanObject.CameraViewModel.CaptureMode>.Publisher",
+                "usr": "s:7Combine9PublishedV9PublisherV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12CSScanObject15CameraViewModelC12$captureMode7Combine9PublishedV9PublisherVyAC07CaptureG0O_Gvp",
+            "mangledName": "$s12CSScanObject15CameraViewModelC12$captureMode7Combine9PublishedV9PublisherVyAC07CaptureG0O_Gvp",
+            "moduleName": "CSScanObject",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Publisher",
+                    "printedName": "Combine.Published<CSScanObject.CameraViewModel.CaptureMode>.Publisher",
+                    "usr": "s:7Combine9PublishedV9PublisherV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject15CameraViewModelC12$captureMode7Combine9PublishedV9PublisherVyAC07CaptureG0O_Gvg",
+                "mangledName": "$s12CSScanObject15CameraViewModelC12$captureMode7Combine9PublishedV9PublisherVyAC07CaptureG0O_Gvg",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Publisher",
+                    "printedName": "Combine.Published<CSScanObject.CameraViewModel.CaptureMode>.Publisher",
+                    "usr": "s:7Combine9PublishedV9PublisherV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject15CameraViewModelC12$captureMode7Combine9PublishedV9PublisherVyAC07CaptureG0O_Gvs",
+                "mangledName": "$s12CSScanObject15CameraViewModelC12$captureMode7Combine9PublishedV9PublisherVyAC07CaptureG0O_Gvs",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "intro_Macosx": "11.0",
+                "intro_iOS": "14.0",
+                "intro_tvOS": "14.0",
+                "intro_watchOS": "7.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject15CameraViewModelC12$captureMode7Combine9PublishedV9PublisherVyAC07CaptureG0O_GvM",
+                "mangledName": "$s12CSScanObject15CameraViewModelC12$captureMode7Combine9PublishedV9PublisherVyAC07CaptureG0O_GvM",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "intro_Macosx": "11.0",
+                "intro_iOS": "14.0",
+                "intro_tvOS": "14.0",
+                "intro_watchOS": "7.0",
+                "declAttributes": [
+                  "Available",
+                  "Available",
+                  "Available",
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "captureDir",
+            "printedName": "captureDir",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URL?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12CSScanObject15CameraViewModelC10captureDir10Foundation3URLVSgvp",
+            "mangledName": "$s12CSScanObject15CameraViewModelC10captureDir10Foundation3URLVSgvp",
+            "moduleName": "CSScanObject",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.URL?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "URL",
+                        "printedName": "Foundation.URL",
+                        "usr": "s:10Foundation3URLV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject15CameraViewModelC10captureDir10Foundation3URLVSgvg",
+                "mangledName": "$s12CSScanObject15CameraViewModelC10captureDir10Foundation3URLVSgvg",
+                "moduleName": "CSScanObject",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "recommendedMinPhotos",
+            "printedName": "recommendedMinPhotos",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12CSScanObject15CameraViewModelC20recommendedMinPhotosSivpZ",
+            "mangledName": "$s12CSScanObject15CameraViewModelC20recommendedMinPhotosSivpZ",
+            "moduleName": "CSScanObject",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject15CameraViewModelC20recommendedMinPhotosSivgZ",
+                "mangledName": "$s12CSScanObject15CameraViewModelC20recommendedMinPhotosSivgZ",
+                "moduleName": "CSScanObject",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject15CameraViewModelC20recommendedMinPhotosSivsZ",
+                "mangledName": "$s12CSScanObject15CameraViewModelC20recommendedMinPhotosSivsZ",
+                "moduleName": "CSScanObject",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject15CameraViewModelC20recommendedMinPhotosSivMZ",
+                "mangledName": "$s12CSScanObject15CameraViewModelC20recommendedMinPhotosSivMZ",
+                "moduleName": "CSScanObject",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "defaultAutomaticCaptureIntervalSecs",
+            "printedName": "defaultAutomaticCaptureIntervalSecs",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12CSScanObject15CameraViewModelC35defaultAutomaticCaptureIntervalSecsSdvp",
+            "mangledName": "$s12CSScanObject15CameraViewModelC35defaultAutomaticCaptureIntervalSecsSdvp",
+            "moduleName": "CSScanObject",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject15CameraViewModelC35defaultAutomaticCaptureIntervalSecsSdvg",
+                "mangledName": "$s12CSScanObject15CameraViewModelC35defaultAutomaticCaptureIntervalSecsSdvg",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject15CameraViewModelC35defaultAutomaticCaptureIntervalSecsSdvs",
+                "mangledName": "$s12CSScanObject15CameraViewModelC35defaultAutomaticCaptureIntervalSecsSdvs",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12CSScanObject15CameraViewModelC35defaultAutomaticCaptureIntervalSecsSdvM",
+                "mangledName": "$s12CSScanObject15CameraViewModelC35defaultAutomaticCaptureIntervalSecsSdvM",
+                "moduleName": "CSScanObject",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CameraViewModel",
+                "printedName": "CSScanObject.CameraViewModel",
+                "usr": "c:@M@CSScanObject@objc(cs)CameraViewModel"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@CSScanObject@objc(cs)CameraViewModel(im)init",
+            "mangledName": "$s12CSScanObject15CameraViewModelCACycfc",
+            "moduleName": "CSScanObject",
+            "overriding": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "startSetup",
+            "printedName": "startSetup()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12CSScanObject15CameraViewModelC10startSetupyyF",
+            "mangledName": "$s12CSScanObject15CameraViewModelC10startSetupyyF",
+            "moduleName": "CSScanObject",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@CSScanObject@objc(cs)CameraViewModel",
+        "mangledName": "$s12CSScanObject15CameraViewModelC",
+        "moduleName": "CSScanObject",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "ObservableObject",
+            "printedName": "ObservableObject",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ObjectWillChangePublisher",
+                "printedName": "ObjectWillChangePublisher",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ObservableObjectPublisher",
+                    "printedName": "Combine.ObservableObjectPublisher",
+                    "usr": "s:7Combine25ObservableObjectPublisherC"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:7Combine16ObservableObjectP",
+            "mangledName": "$s7Combine16ObservableObjectP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraPreviewView.swift",
+      "kind": "StringLiteral",
+      "offset": 241,
+      "length": 32,
+      "value": "\"com.apple.sample.CaptureSample\""
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraPreviewView.swift",
+      "kind": "StringLiteral",
+      "offset": 313,
+      "length": 19,
+      "value": "\"CameraPreviewView\""
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraPreviewView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 570,
+      "length": 2,
+      "value": "50"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CaptureInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 220,
+      "length": 32,
+      "value": "\"com.apple.sample.CaptureSample\""
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CaptureInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 292,
+      "length": 13,
+      "value": "\"CaptureInfo\""
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CaptureInfo.swift",
+      "kind": "BooleanLiteral",
+      "offset": 641,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CaptureInfo.swift",
+      "kind": "BooleanLiteral",
+      "offset": 673,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CaptureInfo.swift",
+      "kind": "BooleanLiteral",
+      "offset": 707,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CaptureInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 868,
+      "length": 7,
+      "value": "\".HEIC\""
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CaptureInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 6949,
+      "length": 57,
+      "value": "\"com.apple.example.CaptureSample.CaptureInfo.loaderQueue\""
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CaptureInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 7173,
+      "length": 6,
+      "value": "\"IMG_\""
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/PhotoCaptureDelegate.swift",
+      "kind": "StringLiteral",
+      "offset": 313,
+      "length": 32,
+      "value": "\"com.apple.sample.CaptureSample\""
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/PhotoCaptureDelegate.swift",
+      "kind": "StringLiteral",
+      "offset": 385,
+      "length": 22,
+      "value": "\"PhotoCaptureDelegate\""
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/PhotoCaptureDelegate.swift",
+      "kind": "StringLiteral",
+      "offset": 619,
+      "length": 21,
+      "value": "\"CSScanObject.PhotoCaptureProcessor\""
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/ImageLoader.swift",
+      "kind": "StringLiteral",
+      "offset": 270,
+      "length": 32,
+      "value": "\"com.apple.sample.CaptureSample\""
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/ImageLoader.swift",
+      "kind": "StringLiteral",
+      "offset": 342,
+      "length": 13,
+      "value": "\"ImageLoader\""
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/ImageLoader.swift",
+      "kind": "StringLiteral",
+      "offset": 3104,
+      "length": 50,
+      "value": "\"com.apple.example.CaptureSample.AsyncImageLoader\""
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CaptureGalleryView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 328,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CaptureGalleryView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 899,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CaptureGalleryView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5194,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CaptureGalleryView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7948,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CaptureGalleryView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 8887,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/TimerView.swift",
+      "kind": "FloatLiteral",
+      "offset": 440,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/TimerView.swift",
+      "kind": "FloatLiteral",
+      "offset": 452,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/TimerView.swift",
+      "kind": "FloatLiteral",
+      "offset": 463,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/TimerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 558,
+      "length": 2,
+      "value": "50"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/TimerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 602,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/TimerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 658,
+      "length": 2,
+      "value": "50"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/TimerView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 682,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/3dModel\/GenerateModel.swift",
+      "kind": "StringLiteral",
+      "offset": 801,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraView.swift",
+      "kind": "FloatLiteral",
+      "offset": 423,
+      "length": 4,
+      "value": "0.15"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 520,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraView.swift",
+      "kind": "FloatLiteral",
+      "offset": 620,
+      "length": 3,
+      "value": "4.0"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraView.swift",
+      "kind": "FloatLiteral",
+      "offset": 626,
+      "length": 3,
+      "value": "3.0"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraView.swift",
+      "kind": "FloatLiteral",
+      "offset": 669,
+      "length": 4,
+      "value": "15.0"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 760,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraView.swift",
+      "kind": "StringLiteral",
+      "offset": 805,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraView.swift",
+      "kind": "StringLiteral",
+      "offset": 853,
+      "length": 41,
+      "value": "\"consecutive captures should overlap 70%\""
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 930,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraView.swift",
+      "kind": "FloatLiteral",
+      "offset": 1005,
+      "length": 4,
+      "value": "1.08"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1087,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraView.swift",
+      "kind": "FloatLiteral",
+      "offset": 1204,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12487,
+      "length": 2,
+      "value": "80"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12528,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12569,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraView.swift",
+      "kind": "FloatLiteral",
+      "offset": 12750,
+      "length": 3,
+      "value": "2.0"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraView.swift",
+      "kind": "FloatLiteral",
+      "offset": 12769,
+      "length": 3,
+      "value": "2.0"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraView.swift",
+      "kind": "FloatLiteral",
+      "offset": 15768,
+      "length": 3,
+      "value": "3.0"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraView.swift",
+      "kind": "FloatLiteral",
+      "offset": 15840,
+      "length": 3,
+      "value": "2.0"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraView.swift",
+      "kind": "FloatLiteral",
+      "offset": 18260,
+      "length": 4,
+      "value": "60.0"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraView.swift",
+      "kind": "FloatLiteral",
+      "offset": 18313,
+      "length": 4,
+      "value": "60.0"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraView.swift",
+      "kind": "FloatLiteral",
+      "offset": 18372,
+      "length": 4,
+      "value": "10.0"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 18425,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/InfoPanelView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2787,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/InfoPanelView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2830,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/InfoPanelView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2882,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/InfoPanelView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2892,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/InfoPanelView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2901,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/InfoPanelView.swift",
+      "kind": "FloatLiteral",
+      "offset": 2913,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/InfoPanelView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2968,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/InfoPanelView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2978,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/InfoPanelView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2987,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/InfoPanelView.swift",
+      "kind": "FloatLiteral",
+      "offset": 2999,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/InfoPanelView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5108,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/InfoPanelView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5141,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/InfoPanelView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5935,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/InfoPanelView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6422,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CaptureFolderState.swift",
+      "kind": "StringLiteral",
+      "offset": 254,
+      "length": 32,
+      "value": "\"com.apple.sample.CaptureSample\""
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CaptureFolderState.swift",
+      "kind": "StringLiteral",
+      "offset": 326,
+      "length": 20,
+      "value": "\"CaptureFolderState\""
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CaptureFolderState.swift",
+      "kind": "StringLiteral",
+      "offset": 775,
+      "length": 25,
+      "value": "\"CaptureFolderState.Work\""
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CaptureFolderState.swift",
+      "kind": "Array",
+      "offset": 1075,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CaptureFolderState.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1828,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/Capture.swift",
+      "kind": "StringLiteral",
+      "offset": 316,
+      "length": 32,
+      "value": "\"com.apple.sample.CaptureSample\""
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/Capture.swift",
+      "kind": "StringLiteral",
+      "offset": 388,
+      "length": 9,
+      "value": "\"Capture\""
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CaptureFoldersView.swift",
+      "kind": "StringLiteral",
+      "offset": 235,
+      "length": 32,
+      "value": "\"com.apple.sample.CaptureSample\""
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CaptureFoldersView.swift",
+      "kind": "StringLiteral",
+      "offset": 307,
+      "length": 20,
+      "value": "\"CaptureFoldersView\""
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CaptureFoldersView.swift",
+      "kind": "Array",
+      "offset": 450,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CaptureFoldersView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2222,
+      "length": 2,
+      "value": "50"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CaptureFoldersView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2268,
+      "length": 2,
+      "value": "50"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/AsyncImageHelpers.swift",
+      "kind": "Array",
+      "offset": 1109,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/AsyncImageHelpers.swift",
+      "kind": "StringLiteral",
+      "offset": 1607,
+      "length": 21,
+      "value": "\"questionmark.circle\""
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/AsyncImageHelpers.swift",
+      "kind": "StringLiteral",
+      "offset": 1683,
+      "length": 14,
+      "value": "\"xmark.circle\""
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraViewModel.swift",
+      "kind": "StringLiteral",
+      "offset": 276,
+      "length": 32,
+      "value": "\"com.apple.sample.CaptureSample\""
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraViewModel.swift",
+      "kind": "StringLiteral",
+      "offset": 348,
+      "length": 17,
+      "value": "\"CameraViewModel\""
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1303,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1480,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1735,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1975,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraViewModel.swift",
+      "kind": "FloatLiteral",
+      "offset": 3293,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraViewModel.swift",
+      "kind": "FloatLiteral",
+      "offset": 3299,
+      "length": 4,
+      "value": "30.0"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3687,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3873,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3918,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4268,
+      "length": 3,
+      "value": "250"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4317,
+      "length": 2,
+      "value": "30"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4358,
+      "length": 3,
+      "value": "200"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraViewModel.swift",
+      "kind": "FloatLiteral",
+      "offset": 4423,
+      "length": 3,
+      "value": "3.0"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7826,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9768,
+      "length": 3,
+      "value": "512"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9796,
+      "length": 3,
+      "value": "512"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9825,
+      "length": 3,
+      "value": "512"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9855,
+      "length": 3,
+      "value": "512"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10002,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraViewModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10175,
+      "length": 4,
+      "value": "1108"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraViewModel.swift",
+      "kind": "StringLiteral",
+      "offset": 10779,
+      "length": 60,
+      "value": "\"didSet setupResult=\""
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraViewModel.swift",
+      "kind": "StringLiteral",
+      "offset": 10838,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 11031,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 11163,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 11522,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chaman\/Personal\/Projects\/CSScanObject\/CSScanObject\/Capture\/CameraViewModel.swift",
+      "kind": "StringLiteral",
+      "offset": 11667,
+      "length": 31,
+      "value": "\"CameraViewModel: sessionQueue\""
+    }
+  ]
+}
