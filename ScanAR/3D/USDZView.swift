@@ -105,9 +105,13 @@ struct USDZView: View {
                     self.progress = progress
                 }
             }
-            hello.errorHandler = { error in
+            hello.errorHandler = { (errorMessage: String, errorCode: Int) in
                 DispatchQueue.main.async {
-                    self.errorMessage = error
+                    if errorCode >= 400 && errorCode < 500 {
+                        self.errorMessage = "Capture is not enough to create model, please add more with code: \(errorCode)"
+                    } else {
+                        self.errorMessage = "Error occurred: \(errorMessage) with code: \(errorCode)"
+                    }
                     self.progressState = "Something Went Wrong"
                     self.progress = nil
                     self.estimatedTime = nil

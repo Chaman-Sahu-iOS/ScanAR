@@ -36,7 +36,7 @@ public struct HelloPhotogrammetry {
     // Progress and error handler closures
     public var progressHandler: ((Double) -> Void)?
     public var estimatedTimeHandler: ((TimeInterval) -> Void)?
-    public var errorHandler: ((String) -> Void)?
+    public var errorHandler: ((String, Int) -> Void)?
     public var completionHandler: (() -> Void)?
     public var modelDirctoryHandler: ((String) -> Void)?
     
@@ -62,7 +62,7 @@ public struct HelloPhotogrammetry {
             } catch {
                 print("Failed to remove existing directory: \(error.localizedDescription)")
                 // Optional: Handle the error (e.g., by calling an error handler)
-                errorHandler?("Failed to remove existing directory: \(error.localizedDescription)")
+                errorHandler?("Failed to remove existing directory: \(error.localizedDescription)", 102)
                 return
             }
         }
@@ -73,7 +73,7 @@ public struct HelloPhotogrammetry {
         } catch {
             print("Failed to create directory: \(error.localizedDescription)")
             // Optional: Handle the error (e.g., by calling an error handler)
-            errorHandler?("Failed to create directory: \(error.localizedDescription)")
+            errorHandler?("Failed to create directory: \(error.localizedDescription)", 101)
         }
 
         
@@ -87,7 +87,7 @@ public struct HelloPhotogrammetry {
         
         guard PhotogrammetrySession.isSupported else {
             print("Object Capture is not available on this device.")
-            errorHandler?("Object Capture is not available on this device.")
+            errorHandler?("Object Capture is not available on this device.", 201)
             return
         }
         
@@ -104,11 +104,11 @@ public struct HelloPhotogrammetry {
             print("Successfully created session.")
         } catch {
             print("Error creating session: \(String(describing: error))")
-            errorHandler?("Error creating session: \(String(describing: error))")
+            errorHandler?("Error creating session: \(String(describing: error))", 202)
             return
         }
         guard let session = maybeSession else {
-            errorHandler?("Failed to create photogrammetry session.")
+            errorHandler?("Failed to create photogrammetry session.", 203)
             return
         }
         
@@ -127,7 +127,7 @@ public struct HelloPhotogrammetry {
                         completionHandler?()
                     case .requestError(let request, let error):
                         print("Request \(String(describing: request)) had an error: \(String(describing: error))")
-                        errorHandler?("Request \(String(describing: request)) had an error: \(String(describing: error))")
+                        errorHandler?("Request \(String(describing: request)) had an error: \(String(describing: error))", 400)
                     case .requestComplete(let request, let result):
                         HelloPhotogrammetry.handleRequestComplete(request: request, result: result)
                     case .requestProgress(let request, let fractionComplete):
@@ -138,28 +138,28 @@ public struct HelloPhotogrammetry {
                         print("Data ingestion is complete. Beginning processing...")
                     case .invalidSample(let id, let reason):
                         print("Invalid Sample! id=\(id) reason=\"\(reason)\"")
-                        errorHandler?("Invalid Sample! id=\(id) reason=\"\(reason)\"")
+                        errorHandler?("Invalid Sample! id=\(id) reason=\"\(reason)\"", 401)
                     case .skippedSample(let id):
                         print("Sample id=\(id) was skipped by processing.")
                     case .automaticDownsampling:
                         print("Automatic downsampling was applied!")
                     case .processingCancelled:
                         print("Processing was cancelled.")
-                        errorHandler?("Processing was cancelled.")
+                        errorHandler?("Processing was cancelled.", 402)
                     case .requestProgressInfo(_, let progressInfo):
                         print("Progress Request Received. Time remaining: \(progressInfo.estimatedRemainingTime?.debugDescription)")
                         estimatedTime?(progressInfo.estimatedRemainingTime ?? 0.0)
                     case .stitchingIncomplete:
                         print("Received stitching incomplete message.")
-                        errorHandler?("Received stitching incomplete message.")
+                        errorHandler?("Received stitching incomplete message.", 403)
                     @unknown default:
                         print("Output: unhandled message: \(output.localizedDescription)")
-                        errorHandler?("Output: unhandled message: \(output.localizedDescription)")
+                        errorHandler?("Output: unhandled message: \(output.localizedDescription)", 404)
                     }
                 }
             } catch {
                 print("Output: ERROR = \(String(describing: error))")
-                errorHandler?("Output: ERROR = \(String(describing: error))")
+                errorHandler?("Output: ERROR = \(String(describing: error))", 500)
             }
         }
         
@@ -171,7 +171,7 @@ public struct HelloPhotogrammetry {
                 RunLoop.main.run()
             } catch {
                 print("Process got error: \(String(describing: error))")
-                errorHandler?("Process got error: \(String(describing: error))")
+                errorHandler?("Process got error: \(String(describing: error))", 501)
             }
         }
     }

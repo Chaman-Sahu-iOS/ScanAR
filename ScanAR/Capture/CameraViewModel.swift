@@ -270,7 +270,7 @@ public class CameraViewModel: NSObject, ObservableObject {
     private var photoId: UInt32 = 0
 
     private var photoQualityPrioritizationMode: AVCapturePhotoOutput.QualityPrioritization =
-        .quality
+        .speed
 
     private static let cameraShutterNoiseID: SystemSoundID = 1108
 
@@ -387,7 +387,7 @@ public class CameraViewModel: NSObject, ObservableObject {
 
             DispatchQueue.main.async {
                 self.isHighQualityMode = photoSettings.isHighResolutionPhotoEnabled
-                    && photoSettings.photoQualityPrioritization == .quality
+                    && photoSettings.photoQualityPrioritization == .speed
             }
 
             self.photoId += 1
@@ -529,7 +529,7 @@ public class CameraViewModel: NSObject, ObservableObject {
         DispatchQueue.main.async {
             self.isDepthDataEnabled = self.photoOutput.isDepthDataDeliveryEnabled
             self.isHighQualityMode = self.photoOutput.isHighResolutionCaptureEnabled
-                && self.photoOutput.maxPhotoQualityPrioritization == .quality
+                && self.photoOutput.maxPhotoQualityPrioritization == .speed
         }
 
         // Setup was successful, so set this value to tell the UI to enable
@@ -544,7 +544,7 @@ public class CameraViewModel: NSObject, ObservableObject {
             // Prefer high resolution and maximum quality, with depth.
             photoOutput.isHighResolutionCaptureEnabled = true
             photoOutput.isDepthDataDeliveryEnabled = photoOutput.isDepthDataDeliverySupported
-            photoOutput.maxPhotoQualityPrioritization = .quality
+            photoOutput.maxPhotoQualityPrioritization = .speed
         } else {
             logger.error("Could not add photo output to the session")
             throw SessionSetupError.configurationFailed

@@ -10,7 +10,6 @@ import CoreMotion
 
 /// This is the app's primary view. It contains a preview area, a capture button, and a thumbnail view
 /// showing the most recenty captured image.
-import SwiftUI
 
 struct CameraView: View {
     static let buttonBackingOpacity: CGFloat = 0.15
@@ -31,6 +30,7 @@ struct CameraView: View {
     let accelerationThreshold = 1.08 // Set your threshold value here
     
     @State private var showModelView = false  // State variable to control the new view presentation
+    @State private var accelerationMagnitude: Double = 0.0  // State variable to hold the acceleration magnitude
     
     var body: some View {
         NavigationView {
@@ -82,6 +82,29 @@ struct CameraView: View {
                             .foregroundColor(.white)
                             .padding()
                     }
+                    // Acceleration Progress Indicator
+                    VStack {
+                        ZStack(alignment: .bottom) {
+                            Rectangle()
+                                .fill(
+                                    LinearGradient(gradient: Gradient(colors: [.green, .yellow, .red]),
+                                                   startPoint: .bottom,
+                                                   endPoint: .top)
+                                )
+                                .frame(width: 10)
+                            
+                            let clampedMagnitude = min(max(accelerationMagnitude, 0), accelerationThreshold * 2)
+                            Rectangle()
+                                .fill(clampedMagnitude > accelerationThreshold ? Color.red : Color.green)
+                                .frame(height: (geometryReader.size.width * aspectRatio) * CGFloat(clampedMagnitude / (accelerationThreshold * 2)))
+                        }
+                        .cornerRadius(10)
+                        .padding(.vertical, 16)
+                        .padding(.bottom, 32)
+                        .frame(width: 10, height: geometryReader.size.width * aspectRatio)
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .trailing)
+                    .padding()
                 }
             }
             // .navigationTitle(Text("Scan"))
@@ -95,7 +118,7 @@ struct CameraView: View {
                     .foregroundColor(.white)
             })
             .navigationBarItems(trailing: Button(action: {
-                if model.captureFolderState!.captures.count < 20 {
+                if model.captureFolderState!.captures.count < 30 {
                     self.lowCountAlert = true
                 } else {
                     CustomLocationManager.shared.startUpdatingLocation(for: .endingPoint) // Ending Point
@@ -106,17 +129,16 @@ struct CameraView: View {
                     .foregroundColor(.white)
             })
             .onAppear {
-                 startMonitoringAcceleration()
+                startMonitoringAcceleration()
             }
             .alert(isPresented: $lowCountAlert) {
-                Alert(title: Text("Low Capture Count"), message: Text("Please Capture More for the Best Result"), dismissButton: .default(Text("OK") ))
+                Alert(title: Text("Low Capture Count"), message: Text("Please Capture More for the Best Result"), dismissButton: .default(Text("OK")))
             }
             .sheet(isPresented: $showModelView) {  // Present the new view as a sheet
                 USDZView(captureURL: model.captureDir)
             }
         }
     }
-    
     
     func startMonitoringAcceleration() {
         // Check if accelerometer is available
@@ -146,6 +168,11 @@ struct CameraView: View {
         let magnitude = sqrt(acceleration.x * acceleration.x +
                              acceleration.y * acceleration.y +
                              acceleration.z * acceleration.z)
+        
+        // Update the state variable with the current magnitude
+        DispatchQueue.main.async {
+            self.accelerationMagnitude = magnitude
+        }
         
         // Check if the magnitude exceeds the threshold and if the flag is not set
         if magnitude > accelerationThreshold && !isTooFast {
