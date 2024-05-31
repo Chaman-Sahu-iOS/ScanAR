@@ -98,7 +98,7 @@ struct USDZView: View {
     
     private func startPhotogrammetry() {
         DispatchQueue.global(qos: .userInitiated).async {
-            var hello = HelloPhotogrammetry(inputFolder: captureURL)
+            var hello = GenerateModel(inputFolder: captureURL)
             hello.progressHandler = { progress in
                 DispatchQueue.main.async {
                     fetchLocationPoints()
