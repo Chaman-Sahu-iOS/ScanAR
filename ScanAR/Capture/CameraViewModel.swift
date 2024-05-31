@@ -20,7 +20,7 @@ private let logger = Logger(subsystem: "com.apple.sample.CaptureSample",
 public class CameraViewModel: NSObject, ObservableObject {
     public var session: AVCaptureSession
 
-    enum CaptureMode {
+    public enum CaptureMode {
         /// The user has selected manual capture mode, which captures one
         /// image per button press.
         case manual
@@ -56,7 +56,7 @@ public class CameraViewModel: NSObject, ObservableObject {
     /// This property returns the current capture mode. This property doesn't indicate whether the capture
     /// timer is currently running. When you set this to `.manual`, it cancels the timer used by automatic
     /// mode.
-    @Published var captureMode: CaptureMode = .manual {
+    @Published public var captureMode: CaptureMode = .manual {
         willSet(newMode) {
             // If the app is currently in auto mode, stop any timers.
             if case .automatic = captureMode {
@@ -105,7 +105,7 @@ public class CameraViewModel: NSObject, ObservableObject {
     }
 
     static let maxPhotosAllowed = 250
-    static let recommendedMinPhotos = 20
+    static public var recommendedMinPhotos = 30
     static let recommendedMaxPhotos = 200
     public var defaultAutomaticCaptureIntervalSecs: Double = 3.0
     

@@ -11,7 +11,7 @@ import CoreMotion
 /// This is the app's primary view. It contains a preview area, a capture button, and a thumbnail view
 /// showing the most recenty captured image.
 
-struct CameraView: View {
+public struct CameraView: View {
     static let buttonBackingOpacity: CGFloat = 0.15
     
     @ObservedObject var model: CameraViewModel
@@ -31,6 +31,19 @@ struct CameraView: View {
     
     @State private var showModelView = false  // State variable to control the new view presentation
     @State private var accelerationMagnitude: Double = 0.0  // State variable to hold the acceleration magnitude
+    
+    // Scanning completion handler closure
+    public var scanningComepletionHandler: ((Bool) -> Void)?
+    
+    // Typealias for the closure that returns a view
+    public typealias DoneButtonViewClosure = () -> AnyView
+    
+    // Closure property to load any view dynamically
+    public var doneButtonView: DoneButtonViewClosure?
+    
+    public init(model: CameraViewModel) {
+        self.model = model
+    }
     
     var body: some View {
         NavigationView {
@@ -118,11 +131,15 @@ struct CameraView: View {
                     .foregroundColor(.white)
             })
             .navigationBarItems(trailing: Button(action: {
-                if model.captureFolderState!.captures.count < 30 {
-                    self.lowCountAlert = true
+                if model.captureFolderState!.captures.count < CameraViewModel.recommendedMinPhotos {
+                    DispatchQueue.main.async {
+                        self.lowCountAlert = true
+                    }
                 } else {
-                    CustomLocationManager.shared.startUpdatingLocation(for: .endingPoint) // Ending Point
-                    showModelView = true  // Toggle the presentation of the model view
+                    DispatchQueue.main.async {
+                        scanningComepletionHandler?(true)
+                        showModelView = true  // Toggle the presentation of the model view
+                    }
                 }
             }) {
                 Text("Done")
@@ -131,11 +148,9 @@ struct CameraView: View {
             .onAppear {
                 startMonitoringAcceleration()
             }
-            .alert(isPresented: $lowCountAlert) {
-                Alert(title: Text("Low Capture Count"), message: Text("Please Capture More for the Best Result"), dismissButton: .default(Text("OK")))
-            }
+            .autoDismissAlert(isPresented: $lowCountAlert, title: "Low Capture Count", message: "Please Capture More for the Best Result", dismissAfter: 5.0)  // Use the custom modifier for auto dismiss alert
             .sheet(isPresented: $showModelView) {  // Present the new view as a sheet
-                USDZView(captureURL: model.captureDir)
+                doneButtonView?()
             }
         }
     }
@@ -169,29 +184,33 @@ struct CameraView: View {
                              acceleration.y * acceleration.y +
                              acceleration.z * acceleration.z)
         
-        // Update the state variable with the current magnitude
+        // Update the state variable with the current magnitude on the main thread
         DispatchQueue.main.async {
             self.accelerationMagnitude = magnitude
         }
         
         // Check if the magnitude exceeds the threshold and if the flag is not set
         if magnitude > accelerationThreshold && !isTooFast {
-            isTooFast = true
-            alertMoveSlow = "Move slower"
-            print("Movement is too fast! Magnitude: \(magnitude)")
-            
-            // Start a timer to reset the flag and message after a few seconds
-            timer?.invalidate()
-            timer = Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false) { _ in
-                resetMovementWarning()
+            DispatchQueue.main.async {
+                isTooFast = true
+                alertMoveSlow = "Move slower"
+                print("Movement is too fast! Magnitude: \(magnitude)")
+                
+                // Start a timer to reset the flag and message after a few seconds
+                timer?.invalidate()
+                timer = Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false) { _ in
+                    resetMovementWarning()
+                }
             }
         }
     }
     
     func resetMovementWarning() {
-        isTooFast = false
-        alertMoveSlow = ""
-        print("Movement warning reset.")
+        DispatchQueue.main.async {
+            isTooFast = false
+            alertMoveSlow = ""
+            print("Movement warning reset.")
+        }
     }
 }
 

@@ -86,8 +86,20 @@ class ViewController: UIViewController {
         
         CustomLocationManager.shared.startUpdatingLocation(for: .startingPoint)
         
+        // Minimum Capture count to create model
+        CameraViewModel.recommendedMinPhotos = 25
+        
         // Create the SwiftUI view that provides the AR experience.
-        let contentView =  CaptureView(model: model)
+        var contentView =  CameraView(model: model)
+        
+        contentView.scanningComepletionHandler = { isCompleted in
+            if isCompleted {
+                CustomLocationManager.shared.startUpdatingLocation(for: .endingPoint) // Ending Point
+            }
+        }
+        contentView.doneButtonView = {
+            AnyView(USDZView(captureURL: self.model.captureDir))
+        }
         
         // Create a UIHostingController with the SwiftUI view
         let hostingController = UIHostingController(rootView: contentView)
