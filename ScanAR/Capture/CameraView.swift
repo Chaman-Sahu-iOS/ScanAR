@@ -45,7 +45,7 @@ public struct CameraView: View {
         self.model = model
     }
     
-    var body: some View {
+    public var body: some View {
         NavigationView {
             GeometryReader { geometryReader in
                 // Place the CameraPreviewView at the bottom of the stack.
