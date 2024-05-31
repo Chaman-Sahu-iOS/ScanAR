@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE38BC652C0A4A4600ACA751 /* AutoDismissAlertModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE38BC642C0A4A4600ACA751 /* AutoDismissAlertModifier.swift */; };
 		FE53D4EF2BFA7B5C003DF5AA /* CSScanObject.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE53D4ED2BFA7B57003DF5AA /* CSScanObject.xcframework */; };
 		FE53D4F02BFA7B5C003DF5AA /* CSScanObject.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FE53D4ED2BFA7B57003DF5AA /* CSScanObject.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FE53D4F62BFB1EBA003DF5AA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE53D4F52BFB1EBA003DF5AA /* Constants.swift */; };
@@ -56,6 +57,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FE38BC642C0A4A4600ACA751 /* AutoDismissAlertModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoDismissAlertModifier.swift; sourceTree = "<group>"; };
 		FE53D4ED2BFA7B57003DF5AA /* CSScanObject.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = CSScanObject.xcframework; sourceTree = "<group>"; };
 		FE53D4F52BFB1EBA003DF5AA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FE69D1FA2BF782CB00C2CD34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE38BC632C0A4A2200ACA751 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FE38BC642C0A4A4600ACA751 /* AutoDismissAlertModifier.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		FE53D4EC2BFA7B3E003DF5AA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +153,7 @@
 		FE72EB902BF5E9C300F2E1F5 /* ScanAR */ = {
 			isa = PBXGroup;
 			children = (
+				FE38BC632C0A4A2200ACA751 /* Views */,
 				FE88EEBB2C02619B00C92A8C /* Manager */,
 				FEE6AA7E2BFCD4E8006A6C89 /* Capture */,
 				FE69D3AD2BFA50B400C2CD34 /* 3D */,
@@ -275,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEE6AA932BFCD50C006A6C89 /* CaptureSampleApp.swift in Sources */,
+				FE38BC652C0A4A4600ACA751 /* AutoDismissAlertModifier.swift in Sources */,
 				FEE6AA9E2BFCD50C006A6C89 /* CameraViewModel.swift in Sources */,
 				FEB3B5052BFF960800E670E2 /* QuickLookPreviewController.swift in Sources */,
 				FE69D3762BF7A47900C2CD34 /* FileManager.swift in Sources */,
@@ -454,7 +466,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.quytech.ad360;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -496,7 +508,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.quytech.ad360;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
