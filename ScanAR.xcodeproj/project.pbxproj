@@ -18,7 +18,7 @@
 		FE69D3B52BFA50C100C2CD34 /* HelloPhotogrammetry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE69D3AF2BFA50C000C2CD34 /* HelloPhotogrammetry.swift */; };
 		FE69D3B72BFA50C100C2CD34 /* USDZView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE69D3B12BFA50C100C2CD34 /* USDZView.swift */; };
 		FE72EB922BF5E9C300F2E1F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE72EB912BF5E9C300F2E1F5 /* AppDelegate.swift */; };
-		FE72EB942BF5E9C300F2E1F5 /* ContentView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE72EB932BF5E9C300F2E1F5 /* ContentView2.swift */; };
+		FE72EB942BF5E9C300F2E1F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE72EB932BF5E9C300F2E1F5 /* ContentView.swift */; };
 		FE72EB962BF5E9C500F2E1F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE72EB952BF5E9C500F2E1F5 /* Assets.xcassets */; };
 		FE72EB992BF5E9C500F2E1F5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE72EB982BF5E9C500F2E1F5 /* Preview Assets.xcassets */; };
 		FEB3B5052BFF960800E670E2 /* QuickLookPreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB3B5042BFF960800E670E2 /* QuickLookPreviewController.swift */; };
@@ -68,7 +68,7 @@
 		FE69D3B12BFA50C100C2CD34 /* USDZView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = USDZView.swift; sourceTree = "<group>"; };
 		FE72EB8E2BF5E9C300F2E1F5 /* ScanAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScanAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE72EB912BF5E9C300F2E1F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FE72EB932BF5E9C300F2E1F5 /* ContentView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView2.swift; sourceTree = "<group>"; };
+		FE72EB932BF5E9C300F2E1F5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FE72EB952BF5E9C500F2E1F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE72EB982BF5E9C500F2E1F5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FEB3B5042BFF960800E670E2 /* QuickLookPreviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickLookPreviewController.swift; sourceTree = "<group>"; };
@@ -159,7 +159,7 @@
 				FE69D3AD2BFA50B400C2CD34 /* 3D */,
 				FE72EB912BF5E9C300F2E1F5 /* AppDelegate.swift */,
 				FE69D1FA2BF782CB00C2CD34 /* ViewController.swift */,
-				FE72EB932BF5E9C300F2E1F5 /* ContentView2.swift */,
+				FE72EB932BF5E9C300F2E1F5 /* ContentView.swift */,
 				FE69D37C2BF8C59E00C2CD34 /* Info.plist */,
 				FE72EB952BF5E9C500F2E1F5 /* Assets.xcassets */,
 				FE72EB972BF5E9C500F2E1F5 /* Preview Content */,
@@ -294,7 +294,7 @@
 				FE69D1FB2BF782CB00C2CD34 /* ViewController.swift in Sources */,
 				FEE6AA962BFCD50C006A6C89 /* PhotoCaptureDelegate.swift in Sources */,
 				FEE6AA912BFCD50C006A6C89 /* CameraPreviewView.swift in Sources */,
-				FE72EB942BF5E9C300F2E1F5 /* ContentView2.swift in Sources */,
+				FE72EB942BF5E9C300F2E1F5 /* ContentView.swift in Sources */,
 				FEE6AA972BFCD50C006A6C89 /* AsyncImageHelpers.swift in Sources */,
 				FEE6AA9C2BFCD50C006A6C89 /* CaptureFolderState.swift in Sources */,
 				FE69D3B72BFA50C100C2CD34 /* USDZView.swift in Sources */,

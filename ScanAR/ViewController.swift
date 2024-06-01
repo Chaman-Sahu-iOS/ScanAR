@@ -18,21 +18,29 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Update the time interval of Auto Capture
-       // model.defaultAutomaticCaptureIntervalSecs = 1
+        // Set Capture Settings
+        self.setCaptureSettings()
         
+        // Add Scan Button
+        self.addScanButton()
+        
+        // Add to View 3D Model
+        self.view3DModelBtn()
+    }
+    
+    func setCaptureSettings() {
         // Update Catpure Mode
+        /// To increase & decrease speed of capture change everySecs value
         model.captureMode = .automatic(everySecs: 1)
+        
+        // Minimum Capture count to create model
+        CameraViewModel.recommendedMinPhotos = 25
         
         // Request for location access
         CustomLocationManager.shared.requestLocationAccess()
-        
-        addCaptureButton()
-        
-        generate3DModelButton()
     }
     
-    func addCaptureButton() {
+    func addScanButton() {
         
         // Create and configure the button
         let button = UIButton(type: .system)
@@ -57,7 +65,7 @@ class ViewController: UIViewController {
         button.addTarget(self, action: #selector(loadContentView), for: .touchUpInside)
     }
     
-    func generate3DModelButton() {
+    func view3DModelBtn() {
         
         // Create and configure the button
         let button = UIButton(type: .system)
@@ -86,19 +94,14 @@ class ViewController: UIViewController {
         
         CustomLocationManager.shared.startUpdatingLocation(for: .startingPoint)
         
-        // Minimum Capture count to create model
-        CameraViewModel.recommendedMinPhotos = 25
-        
         // Create the SwiftUI view that provides the AR experience.
         var contentView =  CameraView(model: model)
         
-        contentView.scanningComepletionHandler = { isCompleted in
-            if isCompleted {
-                CustomLocationManager.shared.startUpdatingLocation(for: .endingPoint) // Ending Point
-            }
-        }
         contentView.doneButtonView = {
-            AnyView(USDZView(captureURL: self.model.captureDir))
+            CustomLocationManager.shared.startUpdatingLocation(for: .endingPoint) // Ending Point
+            
+            // Load USDZ View & Generate Model
+            return AnyView(USDZView(captureURL: self.model.captureDir))
         }
         
         // Create a UIHostingController with the SwiftUI view
@@ -108,6 +111,7 @@ class ViewController: UIViewController {
         self.present(hostingController, animated: true)
     }
     
+    /*
     @objc func generateModel() {
         
         CustomLocationManager.shared.startUpdatingLocation(for: .endingPoint)
@@ -119,22 +123,20 @@ class ViewController: UIViewController {
         hostingController.modalPresentationStyle = .fullScreen
         
         self.present(hostingController, animated: true)
-    }
+    } */
     
     @objc func show3DModel() {
-        
-        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        let documentsDirectory = paths[0]
-        let docURL = URL(string: documentsDirectory)!
-        let dataPath = docURL.appendingPathComponent("Model")
-        let usdz = dataPath.appendingPathComponent("model-mobile.usdz")
+    
+        let fileManager = MyFileManager()
+
+        let modeldir = fileManager.modelDirectoryURL
+        let usdzUrl = modeldir.appendingPathComponent("model-mobile.usdz")
         
         @State var showingQuickLook = true
         
-        let fileManager = FileManager.default
-        if fileManager.fileExists(atPath: usdz.path)  {
+        if fileManager.fileExists(atPath: usdzUrl.relativePath)  {
             
-            let model = QuickLookPreviewController(url: URL(fileURLWithPath: usdz.path), isPresented: $showingQuickLook)
+            let model = QuickLookPreviewController(url: URL(fileURLWithPath: usdzUrl.relativePath), isPresented: $showingQuickLook)
             
             // Create a UIHostingController with the SwiftUI view
             let hostingController = UIHostingController(rootView: model)

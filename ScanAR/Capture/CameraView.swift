@@ -32,17 +32,15 @@ public struct CameraView: View {
     @State private var showModelView = false  // State variable to control the new view presentation
     @State private var accelerationMagnitude: Double = 0.0  // State variable to hold the acceleration magnitude
     
-    // Scanning completion handler closure
-    public var scanningComepletionHandler: ((Bool) -> Void)?
-    
     // Typealias for the closure that returns a view
     public typealias DoneButtonViewClosure = () -> AnyView
     
     // Closure property to load any view dynamically
     public var doneButtonView: DoneButtonViewClosure?
     
-    public init(model: CameraViewModel) {
-        self.model = model
+    public init(model: CameraViewModel, doneButtonView: DoneButtonViewClosure? = nil) {
+            self.model = model
+            self.doneButtonView = doneButtonView
     }
     
     public var body: some View {
@@ -137,7 +135,6 @@ public struct CameraView: View {
                     }
                 } else {
                     DispatchQueue.main.async {
-                        scanningComepletionHandler?(true)
                         showModelView = true  // Toggle the presentation of the model view
                     }
                 }
@@ -351,38 +348,6 @@ struct ManualCaptureButtonView: View {
         }
     }
 }
-
-/*
-@available(iOS 17.0, *)
-struct FilesButton: View {
-    @ObservedObject  var  model: CameraViewModel
-    @State private var showDocumentBrowser = false
-    
-    init(model: CameraViewModel) {
-        self.model = model
-    }
-
-    var body: some View {
-        Button(
-            action: {
-                print("Files button clicked!")
-                CustomLocationManager.shared.startUpdatingLocation(for: .endingPoint)
-                showDocumentBrowser = true
-            },
-            label: {
-                Image(systemName: "folder")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 30)
-                    .foregroundColor(.white)
-            })
-       // .padding(.bottom, 20)
-        .padding(.trailing, 50)
-        .sheet(isPresented: $showDocumentBrowser,
-               onDismiss: { showDocumentBrowser = false },
-               content: { USDZView(captureURL: model.captureDir) })
-    }
-} */
 
 struct CaptureModeButton: View {
     static let toggleDiameter = CaptureButton.outerDiameter / 3.0

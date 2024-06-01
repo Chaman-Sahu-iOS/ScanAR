@@ -47,43 +47,8 @@ public struct GenerateModel {
     
     /// The main run loop entered at the end of the file.
     public mutating func run() {
-                
-        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        let documentsDirectory = paths[0]
-        let docURL = URL(string: documentsDirectory)!
-        let dataPath = docURL.appendingPathComponent("Model")
-
-        let fileManager = FileManager.default
-
-        if fileManager.fileExists(atPath: dataPath.path) {
-            do {
-                // Remove the existing directory
-                try fileManager.removeItem(atPath: dataPath.path)
-            } catch {
-                print("Failed to remove existing directory: \(error.localizedDescription)")
-                // Optional: Handle the error (e.g., by calling an error handler)
-                errorHandler?("Failed to remove existing directory: \(error.localizedDescription)", 102)
-                return
-            }
-        }
-
-        do {
-            // Create the new directory
-            try fileManager.createDirectory(atPath: dataPath.path, withIntermediateDirectories: true, attributes: nil)
-        } catch {
-            print("Failed to create directory: \(error.localizedDescription)")
-            // Optional: Handle the error (e.g., by calling an error handler)
-            errorHandler?("Failed to create directory: \(error.localizedDescription)", 101)
-        }
-
-        
-        let usdz = dataPath.appendingPathComponent("model-mobile.usdz")
-        
-        self.outputFilename = usdz.path
-        self.modelDirctoryHandler?(usdz.path)
-        
-        print("USDZ Path: ", outputFilename)
-        print("Image Path: ", inputFolder)
+                    
+        self.createModelDirectory()
         
         guard PhotogrammetrySession.isSupported else {
             print("Object Capture is not available on this device.")
@@ -202,6 +167,40 @@ public struct GenerateModel {
     private static func handleRequestProgress(request: PhotogrammetrySession.Request,
                                               fractionComplete: Double) {
         print("Progress(request = \(String(describing: request)) = \(fractionComplete)")
+    }
+    
+    private mutating func createModelDirectory() {
+        let fileManager = MyFileManager()
+        let modelURL = fileManager.modelDirectoryURL
+        
+        if fileManager.fileExists(atPath: modelURL.relativePath) {
+            do {
+                // Remove the existing directory
+                try fileManager.deleteFile(atPath: modelURL.relativePath)
+            } catch {
+                print("Failed to remove existing directory: \(error.localizedDescription)")
+                // Optional: Handle the error (e.g., by calling an error handler)
+                errorHandler?("Failed to remove existing directory: \(error.localizedDescription)", 102)
+                return
+            }
+        }
+        
+        do {
+            // Create the new directory
+            try fileManager.createDirectoryAtPath(modelURL.relativePath)
+        } catch {
+            // Optional: Handle the error (e.g., by calling an error handler)
+            errorHandler?("Failed to create directory: \(error.localizedDescription)", 101)
+            return
+        }
+        
+        let usdz = modelURL.appendingPathComponent("model-mobile.usdz")
+        
+        self.outputFilename = usdz.path
+        self.modelDirctoryHandler?(usdz.path)
+        
+        print("USDZ Path: ", outputFilename)
+        print("Image Path: ", inputFolder)
     }
 }
 
