@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import CSScanObject
 
 struct USDZView: View {
     

@@ -7,43 +7,56 @@
 
 import Foundation
 
+enum MyFileManagerError: Error {
+    case directoryCreationFailed
+    case fileNotFound
+    case deletionFailed
+}
+
 class MyFileManager {
+    
+    let modelDirectoryURL: URL
     let fileManager = FileManager.default
     
-    // Function to create a file
-    func createFile(atPath path: String, contents: Data?, attributes: [FileAttributeKey : Any]? = nil) -> Bool {
-        return fileManager.createFile(atPath: path, contents: contents, attributes: attributes)
+    init() {
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let documentsDirectory = paths[0]
+        let docURL = URL(fileURLWithPath: documentsDirectory)
+        modelDirectoryURL = docURL.appendingPathComponent("Model")
     }
     
-    // Function to delete a file
-    func deleteFile(atPath path: String) -> Bool {
+    func createDirectoryIfNeeded() throws -> URL {
         do {
-            try fileManager.removeItem(atPath: path)
-            return true
+            if !fileManager.fileExists(atPath: modelDirectoryURL.path) {
+                try fileManager.createDirectory(at: modelDirectoryURL, withIntermediateDirectories: true, attributes: nil)
+            }
+            return modelDirectoryURL
         } catch {
-            print("Error deleting file: \(error)")
-            return false
+            throw MyFileManagerError.directoryCreationFailed
         }
     }
     
-    // Function to move a file
-    func moveFile(fromPath sourcePath: String, toPath destinationPath: String) -> Bool {
+    func createDirectoryAtPath(_ path: String) throws {
         do {
-            try fileManager.moveItem(atPath: sourcePath, toPath: destinationPath)
-            return true
+            try fileManager.createDirectory(atPath: path, withIntermediateDirectories: true, attributes: nil)
         } catch {
-            print("Error moving file: \(error)")
-            return false
+            print("Failed to create directory: \(error.localizedDescription)")
+            throw MyFileManagerError.directoryCreationFailed
         }
     }
     
-    // Function to read a file
-    func readFile(atPath path: String) -> Data? {
-        return fileManager.contents(atPath: path)
-    }
-    
-    // Function to check if a file exists at a given path
     func fileExists(atPath path: String) -> Bool {
         return fileManager.fileExists(atPath: path)
+    }
+    
+    func deleteFile(atPath path: String) throws {
+        if !fileManager.fileExists(atPath: path) {
+            throw MyFileManagerError.fileNotFound
+        }
+        do {
+            try fileManager.removeItem(atPath: path)
+        } catch {
+            throw MyFileManagerError.deletionFailed
+        }
     }
 }
