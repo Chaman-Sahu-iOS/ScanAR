@@ -127,6 +127,7 @@ struct USDZView: View {
                     if self.errorMessage == nil {
                         self.progressState = "File is ready to View"
                         self.estimatedTime = nil
+                        self.deleteCaptureDir()
                     }
                 }
             }
@@ -136,6 +137,24 @@ struct USDZView: View {
                 }
             }
             hello.run()
+        }
+    }
+    
+    private func deleteCaptureDir() {
+        let fileManager = MyFileManager()
+        
+        guard let captureDir = self.captureURL else {
+            return
+        }
+        
+        if fileManager.fileExists(atPath: captureDir.relativePath) {
+            do {
+                // Remove the existing directory
+                try fileManager.deleteFile(atPath: captureDir.relativePath)
+            } catch {
+                print("Failed to remove Capture directory: \(error.localizedDescription)")
+                return
+            }
         }
     }
     

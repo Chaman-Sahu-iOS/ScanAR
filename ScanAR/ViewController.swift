@@ -13,13 +13,13 @@ import SwiftUI
 
 class ViewController: UIViewController {
     
-    let model = CameraViewModel()
+    var model: CameraViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Set Capture Settings
-        self.setCaptureSettings()
+        // Request for location access
+        CustomLocationManager.shared.requestLocationAccess()
         
         // Add Scan Button
         self.addScanButton()
@@ -28,16 +28,27 @@ class ViewController: UIViewController {
         self.view3DModelBtn()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.model = CameraViewModel()
+        
+        // Set Capture Settings
+        self.setCaptureSettings()
+    }
+    
     func setCaptureSettings() {
-        // Update Catpure Mode
-        /// To increase & decrease speed of capture change everySecs value
-        model.captureMode = .automatic(everySecs: 1)
+        
+        guard let model = model else {
+            self.cameraErrorAlert()
+            return
+        }
         
         // Minimum Capture count to create model
         CameraViewModel.recommendedMinPhotos = 25
         
-        // Request for location access
-        CustomLocationManager.shared.requestLocationAccess()
+        // Update Catpure Mode
+        /// To increase & decrease speed of capture change everySecs value
+        model.captureMode = .automatic(everySecs: 1)
     }
     
     func addScanButton() {
@@ -94,6 +105,11 @@ class ViewController: UIViewController {
         
         CustomLocationManager.shared.startUpdatingLocation(for: .startingPoint)
         
+        guard let model = model else {
+            self.cameraErrorAlert()
+            return
+        }
+        
         // Create the SwiftUI view that provides the AR experience.
         var contentView =  CameraView(model: model)
         
@@ -101,7 +117,7 @@ class ViewController: UIViewController {
             CustomLocationManager.shared.startUpdatingLocation(for: .endingPoint) // Ending Point
             
             // Load USDZ View & Generate Model
-            return AnyView(USDZView(captureURL: self.model.captureDir))
+            return AnyView(USDZView(captureURL: model.captureDir))
         }
         
         // Create a UIHostingController with the SwiftUI view
@@ -155,6 +171,12 @@ class ViewController: UIViewController {
             }))
             self.present(alert, animated: true)
         }
+    }
+    
+    func cameraErrorAlert() {
+        let alert = UIAlertController(title: "Camera Error", message: "Please restart the app for the fresh scan", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .destructive))
+        self.present(alert, animated: true)
     }
 }
 

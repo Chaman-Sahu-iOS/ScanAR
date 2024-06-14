@@ -96,7 +96,7 @@ public class CameraViewModel: NSObject, ObservableObject {
 
     var readyToCapture: Bool {
         return captureFolderState != nil &&
-            captureFolderState!.captures.count < CameraViewModel.maxPhotosAllowed &&
+        captureFolderState?.captures.count ?? 0 < CameraViewModel.maxPhotosAllowed &&
             self.inProgressPhotoCaptureDelegates.count < 2
     }
 
