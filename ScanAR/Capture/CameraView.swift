@@ -31,6 +31,9 @@ public struct CameraView: View {
     
     @State private var showModelView = false  // State variable to control the new view presentation
     @State private var accelerationMagnitude: Double = 0.0  // State variable to hold the acceleration magnitude
+
+    // Image cache to store loaded images
+    @State private var imageCache = [UInt32: UIImage]()
     
     // Typealias for the closure that returns a view
     public typealias DoneButtonViewClosure = () -> AnyView
@@ -39,8 +42,8 @@ public struct CameraView: View {
     public var doneButtonView: DoneButtonViewClosure?
     
     public init(model: CameraViewModel, doneButtonView: DoneButtonViewClosure? = nil) {
-            self.model = model
-            self.doneButtonView = doneButtonView
+        self.model = model
+        self.doneButtonView = doneButtonView
     }
     
     public var body: some View {
@@ -86,6 +89,27 @@ public struct CameraView: View {
                             .background(Color.black.opacity(0.4))  // Transparent background
                             .cornerRadius(8)
                         CaptureButtonPanelView(model: model, width: geometryReader.size.width)
+                        
+                        // Horizontal collection view for captures
+                        ScrollViewReader { scrollViewProxy in
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                HStack(spacing: 10) {
+                                    ForEach(model.captureFolderState?.captures ?? [], id: \.id) { captureInfo in
+                                        CaptureImageView(captureInfo: captureInfo, imageCache: $imageCache)
+                                            .id(captureInfo.id)  // Assign a unique id for each capture
+                                    }
+                                }
+                                .padding(.horizontal)
+                            }
+                            .frame(height: 110)
+                            .onChange(of: model.captureFolderState?.captures.count) { _ in
+                                if let lastCaptureId = model.captureFolderState?.captures.last?.id {
+                                    withAnimation {
+                                        scrollViewProxy.scrollTo(lastCaptureId, anchor: .trailing)
+                                    }
+                                }
+                            }
+                        }
                     }
                     // Show Alert for Fast movement
                     if !alertMoveSlow.isEmpty {
@@ -129,7 +153,7 @@ public struct CameraView: View {
                     .foregroundColor(.white)
             })
             .navigationBarItems(trailing: Button(action: {
-                if model.captureFolderState!.captures.count < CameraViewModel.recommendedMinPhotos {
+                if model.captureFolderState?.captures.count ?? 0 < CameraViewModel.recommendedMinPhotos {
                     DispatchQueue.main.async {
                         self.lowCountAlert = true
                     }
@@ -207,6 +231,42 @@ public struct CameraView: View {
             isTooFast = false
             alertMoveSlow = ""
             print("Movement warning reset.")
+        }
+    }
+}
+
+// Separate view for displaying capture image
+struct CaptureImageView: View {
+    let captureInfo: CaptureInfo
+    @Binding var imageCache: [UInt32: UIImage]
+    
+    var body: some View {
+        if let cachedImage = imageCache[captureInfo.id] {
+            Image(uiImage: cachedImage)
+                .resizable()
+                .scaledToFill()
+                .frame(width: 100, height: 100)
+                .clipped()
+                .cornerRadius(8)
+        } else {
+            // Placeholder while loading image
+            Rectangle()
+                .fill(Color.gray)
+                .frame(width: 100, height: 100)
+                .cornerRadius(8)
+                .onAppear {
+                    loadImageAsync()
+                }
+        }
+    }
+    
+    private func loadImageAsync() {
+        DispatchQueue.global(qos: .userInitiated).async {
+            if let image = UIImage(contentsOfFile: captureInfo.imageUrl.path) {
+                DispatchQueue.main.async {
+                    imageCache[captureInfo.id] = image
+                }
+            }
         }
     }
 }
