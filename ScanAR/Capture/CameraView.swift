@@ -80,43 +80,55 @@ public struct CameraView: View {
                         InfoPanelView(model: model)
                             .padding(.horizontal).padding(.top)
                         //  }
+                        
                         Spacer()
+                        
                         Text(captureOverlapLabel)
                             .foregroundColor(Color.white.opacity(0.7))
-                            .padding(.horizontal, 16)  // Adjust horizontal padding
+                            .padding(.horizontal, 10)  // Adjust horizontal padding
                             .padding(.vertical, 8)     // Adjust vertical padding to be minimal
-                            .padding(.bottom, 10)
+                            .padding(.bottom, 4)
                             .background(Color.black.opacity(0.4))  // Transparent background
                             .cornerRadius(8)
-                        CaptureButtonPanelView(model: model, width: geometryReader.size.width)
+                            .padding(EdgeInsets(top: 0, leading: 10, bottom: model.captureFolderState?.captures.count == 0 ? 15 : 0, trailing: 30))
                         
-                        // Horizontal collection view for captures
-                        ScrollViewReader { scrollViewProxy in
-                            ScrollView(.horizontal, showsIndicators: false) {
-                                HStack(spacing: 10) {
-                                    ForEach(model.captureFolderState?.captures ?? [], id: \.id) { captureInfo in
-                                        CaptureImageView(captureInfo: captureInfo, imageCache: $imageCache)
-                                            .id(captureInfo.id)  // Assign a unique id for each capture
+                       // Horizontal collection view for captures
+                        if let captures = model.captureFolderState?.captures, !captures.isEmpty {
+                            ScrollViewReader { scrollViewProxy in
+                                ScrollView(.horizontal, showsIndicators: false) {
+                                    HStack(spacing: 0) {
+                                        ForEach(model.captureFolderState!.captures, id: \.id) { captureInfo in
+                                            CaptureImageView(captureInfo: captureInfo, imageCache: $imageCache)
+                                                .id(captureInfo.id)  // Assign a unique id for each capture
+                                        }
+                                    }
+                                    .padding(.horizontal)
+                                }
+                                .frame(height: 60)
+                                .onChange(of: model.captureFolderState!.captures.count) { _ in
+                                    if let lastCaptureId = model.captureFolderState!.captures.last?.id {
+                                        withAnimation {
+                                            scrollViewProxy.scrollTo(lastCaptureId, anchor: .trailing)
+                                        }
                                     }
                                 }
-                                .padding(.horizontal)
                             }
-                            .frame(height: 110)
-                            .onChange(of: model.captureFolderState?.captures.count) { _ in
-                                if let lastCaptureId = model.captureFolderState?.captures.last?.id {
-                                    withAnimation {
-                                        scrollViewProxy.scrollTo(lastCaptureId, anchor: .trailing)
-                                    }
-                                }
-                            }
+                            .padding(.bottom, 11)
+                            
+                        } else {
+                            EmptyView() // Placeholder when there are no captures
                         }
+                        
+                        CaptureButtonPanelView(model: model, width: geometryReader.size.width)
                     }
+                    
                     // Show Alert for Fast movement
                     if !alertMoveSlow.isEmpty {
                         Text(alertMoveSlow)
                             .foregroundColor(.white)
                             .padding()
                     }
+                    
                     // Acceleration Progress Indicator
                     VStack {
                         ZStack(alignment: .bottom) {
@@ -135,7 +147,7 @@ public struct CameraView: View {
                         }
                         .cornerRadius(10)
                         .padding(.vertical, 16)
-                        .padding(.bottom, 32)
+                        .padding(.bottom, model.captureFolderState?.captures.count == 0 ? 32 : 53)
                         .frame(width: 10, height: geometryReader.size.width * aspectRatio)
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .trailing)
@@ -245,15 +257,15 @@ struct CaptureImageView: View {
             Image(uiImage: cachedImage)
                 .resizable()
                 .scaledToFill()
-                .frame(width: 100, height: 100)
+                .frame(width: 45, height: 60)
                 .clipped()
-                .cornerRadius(8)
+                //.cornerRadius(8)
         } else {
             // Placeholder while loading image
             Rectangle()
                 .fill(Color.gray)
-                .frame(width: 100, height: 100)
-                .cornerRadius(8)
+                .frame(width: 45, height: 60)
+               // .cornerRadius(8)
                 .onAppear {
                     loadImageAsync()
                 }
@@ -268,6 +280,13 @@ struct CaptureImageView: View {
                 }
             }
         }
+    }
+}
+
+struct CameraView_Previews: PreviewProvider {
+    @StateObject private static var model = CameraViewModel()
+    static var previews: some View {
+        CameraView(model: model)
     }
 }
 
